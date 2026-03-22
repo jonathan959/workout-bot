@@ -108,7 +108,7 @@ Commit both the `.js` and updated `.json` files.
 | Issue | What to check |
 |--------|----------------|
 | `401` / invalid signature (Worker) | `DISCORD_PUBLIC_KEY` matches the app; URL in Portal is exactly your Worker URL with trailing behavior Discord expects; no proxy stripping headers. |
-| `GEMINI_API_KEY` errors | Key from AI Studio, billing/API enabled; model name `gemini-1.5-flash` available in your project. |
+| `GEMINI_API_KEY` errors | Key from AI Studio, billing/API enabled; model name `gemini-2.0-flash` available in your project. |
 | Webhook fails | Webhook URL still valid; bot not deleted; channel exists. |
 | Action does not commit | Repo permissions for `GITHUB_TOKEN`; workflow on default branch; `data/history.json` changed. |
 | Empty Gemini JSON | Rare model glitch; re-run workflow; check API quota. |
