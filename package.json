@@ -1,0 +1,22 @@
+{
+  "name": "discord-daily-workout-bot",
+  "version": "1.0.0",
+  "description": "AI-powered daily workout bot (Gemini + Discord + GitHub Actions + Cloudflare Worker)",
+  "main": "src/generate-workout.js",
+  "scripts": {
+    "workout": "node src/generate-workout.js",
+    "register-slash": "node scripts/register-slash-command.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "discord-interactions": "^3.4.0",
+    "dotenv": "^16.4.5",
+    "itty-router": "^4.0.23"
+  },
+  "devDependencies": {
+    "wrangler": "^3.99.0"
+  }
+}

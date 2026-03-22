@@ -1,0 +1,28 @@
+{
+  "currentDay": 1,
+  "currentWeek": 1,
+  "currentMesocycle": 1,
+  "phase": "accumulation",
+  "lastUpdated": "2026-03-22",
+  "progressionTracking": {
+    "Overhead Cable Extension": { "lastReps": 8, "lastWeight": "15kg", "targetReps": 9 },
+    "Incline DB Press": { "lastReps": 8, "lastWeight": "22kg", "targetReps": 9 }
+  },
+  "recentSessions": [
+    {
+      "date": "2026-03-22",
+      "day": "Day 1",
+      "focus": "Pull A",
+      "exercises": [
+        "Wide Grip Lat Pulldown",
+        "Straight Arm Cable Pulldown",
+        "Cable Reverse Fly",
+        "Face Pull",
+        "Incline DB Curl",
+        "Cable Curl",
+        "Reverse Curl (EZ Bar)",
+        "Cable Crunch"
+      ]
+    }
+  ]
+}
