@@ -58,7 +58,7 @@ async function handleWorkout(env, interaction) {
     const history = await fetchHistory(env.HISTORY_JSON_URL);
     const runCtx = computeRunContext(history, profile);
     const workout = await generateWorkoutFromContext(runCtx, env.GEMINI_API_KEY, {
-      model: env.GEMINI_MODEL || "gemini-2.0-flash",
+      model: env.GEMINI_MODEL || "gemini-2.5-flash",
     });
     workout.week = runCtx.programWeek;
     workout.phase = runCtx.phase;

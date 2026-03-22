@@ -27,7 +27,7 @@ export async function generateWorkoutFromContext(ctx, apiKey, opts = {}) {
     apiKey,
     systemInstruction: systemPrompt,
     userText: userParts,
-    model: opts.model || "gemini-2.0-flash",
+    model: opts.model || "gemini-2.5-flash",
   });
   return parseJsonFromText(text);
 }

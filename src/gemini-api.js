@@ -31,7 +31,7 @@ function parseRetryDelaySeconds(rawBody) {
 function getModel() {
   const v = typeof process !== "undefined" && process.env?.GEMINI_MODEL;
   if (v && String(v).trim()) return String(v).trim();
-  return "gemini-2.0-flash";
+  return "gemini-2.5-flash";
 }
 
 async function generateContentGemini({ apiKey, systemInstruction, userText }) {

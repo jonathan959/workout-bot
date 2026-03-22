@@ -25,7 +25,7 @@ function parseRetryDelaySeconds(rawBody) {
   return 35;
 }
 
-export async function generateContentGemini({ apiKey, systemInstruction, userText, model = "gemini-2.0-flash" }) {
+export async function generateContentGemini({ apiKey, systemInstruction, userText, model = "gemini-2.5-flash" }) {
   if (!apiKey) throw new Error("GEMINI_API_KEY is not set");
 
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`;
