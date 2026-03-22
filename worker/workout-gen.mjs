@@ -3,7 +3,7 @@ import substitutions from "../config/substitutions.json";
 import { buildSystemPrompt } from "./prompts.mjs";
 import { generateContentGemini, parseJsonFromText } from "./gemini-api.mjs";
 
-export async function generateWorkoutFromContext(ctx, apiKey) {
+export async function generateWorkoutFromContext(ctx, apiKey, opts = {}) {
   const systemPrompt = buildSystemPrompt({
     weekNumber: ctx.programWeek,
     mesocycle: ctx.mesocycle,
@@ -27,6 +27,7 @@ export async function generateWorkoutFromContext(ctx, apiKey) {
     apiKey,
     systemInstruction: systemPrompt,
     userText: userParts,
+    model: opts.model || "gemini-2.0-flash",
   });
   return parseJsonFromText(text);
 }

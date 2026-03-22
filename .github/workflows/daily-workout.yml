@@ -22,6 +22,8 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          # Optional repo variable: Settings → Secrets and variables → Actions → Variables
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
       - name: Commit workout history
         run: |
           git config user.name "Workout Bot"

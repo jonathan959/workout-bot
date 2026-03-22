@@ -108,7 +108,8 @@ Commit both the `.js` and updated `.json` files.
 | Issue | What to check |
 |--------|----------------|
 | `401` / invalid signature (Worker) | `DISCORD_PUBLIC_KEY` matches the app; URL in Portal is exactly your Worker URL with trailing behavior Discord expects; no proxy stripping headers. |
-| `GEMINI_API_KEY` errors | Key from AI Studio, billing/API enabled; model name `gemini-2.0-flash` available in your project. |
+| **`429` quota / “exceeded usage”** | Often **`limit: 0`** in the JSON means your **Google Cloud project has no free-tier quota for that model**, not that you personally burned a budget. Fix: create a **new API key** in [Google AI Studio](https://aistudio.google.com/) (new project), ensure **Generative Language API** is enabled in [Google Cloud Console](https://console.cloud.google.com/apis/library/generativelanguage.googleapis.com), or attach **billing** / use a model your tier allows. Set optional **`GEMINI_MODEL`** (repo **Variable** `GEMINI_MODEL` for Actions, or `.env` / Wrangler) to a model listed under [rate limits](https://ai.google.dev/gemini-api/docs/rate-limits). The workflow **retries** a few times on 429 with the server’s delay. |
+| `GEMINI_API_KEY` errors | Key from AI Studio; model name `gemini-2.0-flash` or your `GEMINI_MODEL` must be enabled for the key. |
 | Webhook fails | Webhook URL still valid; bot not deleted; channel exists. |
 | Action does not commit | Repo permissions for `GITHUB_TOKEN`; workflow on default branch; `data/history.json` changed. |
 | Empty Gemini JSON | Rare model glitch; re-run workflow; check API quota. |
