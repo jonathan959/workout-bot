@@ -1,40 +1,19 @@
 /**
  * Cloudflare Worker — Discord slash `/workout` (Interaction endpoint).
+ * No Node built-ins: ESM + fetch + JSON config only.
  *
  * Deploy:
- *   npm install
- *   npx wrangler login
- *   npx wrangler secret put GEMINI_API_KEY
- *   npx wrangler secret put DISCORD_WEBHOOK_URL
- *   npx wrangler secret put DISCORD_PUBLIC_KEY
- *   npx wrangler secret put DISCORD_APPLICATION_ID
- *   npx wrangler secret put HISTORY_JSON_URL
  *   npx wrangler deploy
  *
- * Discord Developer Portal → Application → Interactions Endpoint URL:
- *   https://<your-worker>.<subdomain>.workers.dev/
- *
- * Register `/workout` once (from your machine, not the Worker):
- *   node scripts/register-slash-command.js
- *
- * HISTORY_JSON_URL: raw GitHub URL to `data/history.json` in your repo
- *   e.g. https://raw.githubusercontent.com/OWNER/REPO/main/data/history.json
- *
- * Note: This path does not push history back to GitHub; the daily GitHub Action
- * is the source of truth for advancing `history.json`. The Worker reads the
- * latest file from HISTORY_JSON_URL for context only.
+ * Discord Developer Portal → Interactions Endpoint URL → your workers.dev URL
  */
 
 import { verifyKey } from "discord-interactions";
 import { Router } from "itty-router";
-import { createRequire } from "node:module";
-
-const require = createRequire(import.meta.url);
-
-const profile = require("../config/profile.js");
-const { computeRunContext } = require("../src/run-context.js");
-const { generateWorkoutFromContext } = require("../src/workout-gen.js");
-const { buildWebhookPayload } = require("../src/discord.js");
+import profile from "../config/profile.json";
+import { computeRunContext } from "./run-context.mjs";
+import { generateWorkoutFromContext } from "./workout-gen.mjs";
+import { buildWebhookPayload } from "./discord-embed.mjs";
 
 const router = Router();
 
@@ -74,7 +53,7 @@ async function postWebhook(env, payload) {
   }
 }
 
-async function handleWorkout(env, interaction, ctx) {
+async function handleWorkout(env, interaction) {
   try {
     const history = await fetchHistory(env.HISTORY_JSON_URL);
     const runCtx = computeRunContext(history, profile);
@@ -124,7 +103,7 @@ router.post("/", async (request, env, ctx) => {
   }
 
   if (interaction.type === 2 && interaction.data?.name === "workout") {
-    ctx.waitUntil(handleWorkout(env, interaction, ctx));
+    ctx.waitUntil(handleWorkout(env, interaction));
     return new Response(JSON.stringify({ type: 5 }), {
       headers: { "Content-Type": "application/json" },
     });

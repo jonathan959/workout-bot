@@ -1,9 +1,9 @@
-const profile = require("../config/profile.json");
-const substitutions = require("../config/substitutions.json");
-const { buildSystemPrompt } = require("./prompts");
-const { generateContentGemini, parseJsonFromText } = require("./gemini-api");
+import profile from "../config/profile.json";
+import substitutions from "../config/substitutions.json";
+import { buildSystemPrompt } from "./prompts.mjs";
+import { generateContentGemini, parseJsonFromText } from "./gemini-api.mjs";
 
-async function generateWorkoutFromContext(ctx, apiKey) {
+export async function generateWorkoutFromContext(ctx, apiKey) {
   const systemPrompt = buildSystemPrompt({
     weekNumber: ctx.programWeek,
     mesocycle: ctx.mesocycle,
@@ -30,5 +30,3 @@ async function generateWorkoutFromContext(ctx, apiKey) {
   });
   return parseJsonFromText(text);
 }
-
-module.exports = { generateWorkoutFromContext };

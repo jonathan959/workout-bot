@@ -2,8 +2,8 @@ require("dotenv").config();
 
 const path = require("path");
 
-const profile = require("../config/profile");
-const substitutions = require("../config/substitutions");
+const profile = require("../config/profile.json");
+const substitutions = require("../config/substitutions.json");
 const { postWorkout } = require("./discord");
 const progression = require("./progression");
 const progressionIo = require("./progression-io");

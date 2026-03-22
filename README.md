@@ -41,6 +41,16 @@ AI-generated hypertrophy workouts (Google Gemini), posted to Discord via webhook
 
    This runs `node src/generate-workout.js`, posts to Discord, and updates `data/history.json`.
 
+### Editing `config/*.js`
+
+The canonical sources are `config/profile.js`, `config/exercises.js`, and `config/substitutions.js`. After you change any of them, regenerate the JSON copies (used by the Cloudflare Worker and by Node via `require("*.json")`):
+
+```bash
+npm run build:config
+```
+
+Commit both the `.js` and updated `.json` files.
+
 ## GitHub Actions (daily automation)
 
 1. Push the repo to GitHub.
@@ -67,8 +77,9 @@ AI-generated hypertrophy workouts (Google Gemini), posted to Discord via webhook
    npx wrangler secret put DISCORD_WEBHOOK_URL
    npx wrangler secret put DISCORD_PUBLIC_KEY
    npx wrangler secret put DISCORD_APPLICATION_ID
-   npx wrangler secret put HISTORY_JSON_URL
    ```
+
+   (`HISTORY_JSON_URL` can also be set in `wrangler.toml` `[vars]` — already set for this repo.)
 
 4. Deploy:
 

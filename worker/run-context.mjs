@@ -1,5 +1,10 @@
-const exercises = require("../config/exercises.json");
-const progression = require("./progression");
+import exercises from "../config/exercises.json";
+import {
+  getWeekInMesocycle,
+  getPhaseName,
+  getMesocycleFromWeek,
+  getProgramWeek,
+} from "./progression.mjs";
 
 const DAY_KEYS = ["day1", "day2", "day3", "day4", "day5", "day6"];
 
@@ -26,15 +31,12 @@ function getDayExercisePlan(mesocycleNum, dayKey) {
   return meso[dayKey] || fallback[dayKey] || {};
 }
 
-/**
- * Shared context for Gemini + Discord (CLI and Worker).
- */
-function computeRunContext(history, profile) {
+export function computeRunContext(history, profile) {
   const dayNum = history.currentDay || 1;
-  const programWeek = progression.getProgramWeek(history.currentWeek || 1);
-  const mesocycle = progression.getMesocycleFromWeek(history.currentWeek || 1);
-  const weekInMeso = progression.getWeekInMesocycle(history.currentWeek || 1);
-  const phase = progression.getPhaseName(weekInMeso);
+  const programWeek = getProgramWeek(history.currentWeek || 1);
+  const mesocycle = getMesocycleFromWeek(history.currentWeek || 1);
+  const weekInMeso = getWeekInMesocycle(history.currentWeek || 1);
+  const phase = getPhaseName(weekInMeso);
   const dayKey = DAY_KEYS[dayNum - 1];
   const dayPlan = getDayExercisePlan(mesocycle, dayKey);
   const vars = exercises.mesocycleVariations || {};
@@ -57,11 +59,3 @@ function computeRunContext(history, profile) {
     dayLabel,
   };
 }
-
-module.exports = {
-  DAY_KEYS,
-  getDayLabel,
-  buildRecentHistoryString,
-  getDayExercisePlan,
-  computeRunContext,
-};

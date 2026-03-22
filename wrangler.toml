@@ -1,7 +1,6 @@
 name = "workout-bot"
 main = "worker/index.js"
 compatibility_date = "2024-09-23"
-compatibility_flags = ["nodejs_compat"]
 
 # Public raw URL for Worker context (same file Actions updates on schedule)
 [vars]
