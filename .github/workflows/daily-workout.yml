@@ -16,6 +16,8 @@ jobs:
         with:
           node-version: "18"
       - run: npm install
+      - name: Show commit (verify latest code)
+        run: git rev-parse HEAD && sed -n '1,35p' src/gemini-api.js || true
       - run: node src/generate-workout.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
