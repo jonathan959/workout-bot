@@ -3,5 +3,6 @@ main = "worker/index.js"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 
-# Optional: set HISTORY_JSON_URL in the Cloudflare dashboard or:
-#   npx wrangler secret put HISTORY_JSON_URL
+# Public raw URL for Worker context (same file Actions updates on schedule)
+[vars]
+HISTORY_JSON_URL = "https://raw.githubusercontent.com/jonathan959/workout-bot/main/data/history.json"
