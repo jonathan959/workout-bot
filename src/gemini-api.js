@@ -1,8 +1,8 @@
 /**
  * Gemini REST API — works in Node 18+ and Cloudflare Workers (no @google/generative-ai required).
  *
- * Use v1beta: the v1 endpoint rejects systemInstruction and generationConfig.responseMimeType
- * (400 INVALID_ARGUMENT). v1beta matches GenerateContentRequest used by the JS SDK.
+ * Request JSON must use proto field names (snake_case): system_instruction, generation_config,
+ * response_mime_type. CamelCase triggers 400 INVALID_ARGUMENT on generativelanguage.googleapis.com.
  */
 async function generateContentGemini({ apiKey, systemInstruction, userText }) {
   if (!apiKey) throw new Error("GEMINI_API_KEY is not set");
@@ -10,10 +10,10 @@ async function generateContentGemini({ apiKey, systemInstruction, userText }) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${encodeURIComponent(apiKey)}`;
 
   const body = {
-    systemInstruction: { parts: [{ text: systemInstruction }] },
+    system_instruction: { parts: [{ text: systemInstruction }] },
     contents: [{ role: "user", parts: [{ text: userText }] }],
-    generationConfig: {
-      responseMimeType: "application/json",
+    generation_config: {
+      response_mime_type: "application/json",
       temperature: 0.7,
     },
   };

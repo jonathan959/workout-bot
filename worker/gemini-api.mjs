@@ -1,4 +1,4 @@
-/** Gemini REST — Workers + Node compatible (fetch only). v1beta required for systemInstruction + JSON mode. */
+/** Gemini REST — Workers + Node compatible. Use snake_case JSON keys (proto names). */
 
 export async function generateContentGemini({ apiKey, systemInstruction, userText }) {
   if (!apiKey) throw new Error("GEMINI_API_KEY is not set");
@@ -6,10 +6,10 @@ export async function generateContentGemini({ apiKey, systemInstruction, userTex
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${encodeURIComponent(apiKey)}`;
 
   const body = {
-    systemInstruction: { parts: [{ text: systemInstruction }] },
+    system_instruction: { parts: [{ text: systemInstruction }] },
     contents: [{ role: "user", parts: [{ text: userText }] }],
-    generationConfig: {
-      responseMimeType: "application/json",
+    generation_config: {
+      response_mime_type: "application/json",
       temperature: 0.7,
     },
   };
