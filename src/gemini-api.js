@@ -8,7 +8,11 @@
 async function generateContentGemini({ apiKey, systemInstruction, userText }) {
   if (!apiKey) throw new Error("GEMINI_API_KEY is not set");
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${encodeURIComponent(apiKey)}`;
+  // Default stable model; override with GEMINI_MODEL if ListModels shows a different id for your project.
+  const model = typeof process !== "undefined" && process.env?.GEMINI_MODEL
+    ? process.env.GEMINI_MODEL
+    : "gemini-2.0-flash";
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`;
 
   const combined = [
     systemInstruction,
