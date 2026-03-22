@@ -1,15 +1,26 @@
-/** Gemini REST — Workers + Node compatible. Use snake_case JSON keys (proto names). */
-
+/**
+ * Gemini REST — Workers + Node. Single user message (system + payload merged) to avoid 400s
+ * on system_instruction / response_mime_type with some API gateways.
+ */
 export async function generateContentGemini({ apiKey, systemInstruction, userText }) {
   if (!apiKey) throw new Error("GEMINI_API_KEY is not set");
 
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${encodeURIComponent(apiKey)}`;
 
+  const combined = [
+    systemInstruction,
+    "\n\n--- CONTEXT / USER PAYLOAD ---\n\n",
+    userText,
+  ].join("");
+
   const body = {
-    system_instruction: { parts: [{ text: systemInstruction }] },
-    contents: [{ role: "user", parts: [{ text: userText }] }],
+    contents: [
+      {
+        role: "user",
+        parts: [{ text: combined }],
+      },
+    ],
     generation_config: {
-      response_mime_type: "application/json",
       temperature: 0.7,
     },
   };
