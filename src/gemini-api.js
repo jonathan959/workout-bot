@@ -16,6 +16,7 @@ async function generateContentGemini({ apiKey, systemInstruction, userText }) {
     userText,
   ].join("");
 
+  // Minimal payload: only `contents` (some gateways reject generation_config keys too).
   const body = {
     contents: [
       {
@@ -23,9 +24,6 @@ async function generateContentGemini({ apiKey, systemInstruction, userText }) {
         parts: [{ text: combined }],
       },
     ],
-    generation_config: {
-      temperature: 0.7,
-    },
   };
 
   const res = await fetch(url, {

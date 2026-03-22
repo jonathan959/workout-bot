@@ -20,9 +20,6 @@ export async function generateContentGemini({ apiKey, systemInstruction, userTex
         parts: [{ text: combined }],
       },
     ],
-    generation_config: {
-      temperature: 0.7,
-    },
   };
 
   const res = await fetch(url, {
