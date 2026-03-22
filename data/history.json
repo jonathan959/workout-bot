@@ -1,12 +1,68 @@
 {
-  "currentDay": 1,
+  "currentDay": 2,
   "currentWeek": 1,
   "currentMesocycle": 1,
   "phase": "accumulation",
   "lastUpdated": "2026-03-22",
   "progressionTracking": {
-    "Overhead Cable Extension": { "lastReps": 8, "lastWeight": "15kg", "targetReps": 9 },
-    "Incline DB Press": { "lastReps": 8, "lastWeight": "22kg", "targetReps": 9 }
+    "Overhead Cable Extension": {
+      "lastReps": 8,
+      "lastWeight": "15kg",
+      "targetReps": 9
+    },
+    "Incline DB Press": {
+      "lastReps": 8,
+      "lastWeight": "22kg",
+      "targetReps": 9
+    },
+    "Machine Lat Pulldown (Wide Grip)": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Unilateral Cable Pulldown": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Machine Reverse Fly": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Dumbbell Reverse Fly (Prone on Incline Bench)": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Machine Preacher Curl": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Standing Cable Curl (Straight Bar)": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Reverse Curl": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Weighted Decline Crunch": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    }
   },
   "recentSessions": [
     {
@@ -23,6 +79,23 @@
         "Reverse Curl (EZ Bar)",
         "Cable Crunch"
       ]
+    },
+    {
+      "date": "2026-03-22",
+      "day": "Day 1",
+      "focus": "Pull A — Back Width + Rear Delts + Biceps + Forearms",
+      "exercises": [
+        "Machine Lat Pulldown (Wide Grip)",
+        "Unilateral Cable Pulldown",
+        "Machine Reverse Fly",
+        "Dumbbell Reverse Fly (Prone on Incline Bench)",
+        "Machine Preacher Curl",
+        "Standing Cable Curl (Straight Bar)",
+        "Cable Reverse Curl",
+        "Weighted Decline Crunch"
+      ]
     }
-  ]
+  ],
+  "lastProgressionNote": "Machine Lat Pulldown (Wide Grip): Last week 10 reps — aim for 11 today",
+  "lastSessionNote": "Machine Lat Pulldown (Wide Grip): Last week 10 reps — aim for 11 today"
 }
