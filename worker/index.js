@@ -1,8 +1,9 @@
 /**
  * Cloudflare Worker — Discord slash `/workout` and `/sub`.
  *
- * When `GITHUB_TOKEN` is set (wrangler secret), `/workout` loads history from the
- * GitHub API and writes updates back after each generation (see history-github.mjs).
+ * History: tries GitHub Contents API first when `GITHUB_TOKEN` is set; on failure
+ * falls back to `HISTORY_JSON_URL`. Writes back via Contents API when GET returned a SHA;
+ * PUT errors are logged and the user still gets a successful workout (see history-github.mjs).
  *
  * Deploy: npx wrangler deploy
  * Discord Developer Portal → Interactions Endpoint URL → your workers.dev URL
@@ -16,19 +17,12 @@ import { generateWorkoutFromContext } from "./workout-gen.mjs";
 import { buildWebhookPayload } from "./discord-embed.mjs";
 import { getSubstitutionJson, buildSubstitutionEmbed } from "./sub-handler.mjs";
 import {
-  fetchHistoryAndShaFromGitHub,
+  loadHistoryForWorkout,
   applyWorkoutToHistory,
   putHistoryToGitHub,
 } from "./history-github.mjs";
 
 const router = Router();
-
-async function fetchHistory(url) {
-  if (!url) throw new Error("HISTORY_JSON_URL is not configured");
-  const res = await fetch(url, { headers: { Accept: "application/json" } });
-  if (!res.ok) throw new Error(`History fetch failed: ${res.status}`);
-  return res.json();
-}
 
 async function patchInteractionResponse(env, interaction, body) {
   const appId = env.DISCORD_APPLICATION_ID;
@@ -61,21 +55,8 @@ async function postWebhook(env, payload) {
 
 async function handleWorkout(env, interaction) {
   try {
-    const useGitHub = Boolean(env.GITHUB_TOKEN && String(env.GITHUB_TOKEN).trim());
-    let history;
-    let githubSha = null;
-    let githubOwner;
-    let githubRepo;
-
-    if (useGitHub) {
-      const gh = await fetchHistoryAndShaFromGitHub(env);
-      history = gh.history;
-      githubSha = gh.sha;
-      githubOwner = gh.owner;
-      githubRepo = gh.repo;
-    } else {
-      history = await fetchHistory(env.HISTORY_JSON_URL);
-    }
+    const { history, sha: githubSha, owner: githubOwner, repo: githubRepo, canWriteGithub } =
+      await loadHistoryForWorkout(env);
 
     const runCtx = computeRunContext(history, profile);
     const workout = await generateWorkoutFromContext(runCtx, env.GEMINI_API_KEY, {
@@ -88,10 +69,14 @@ async function handleWorkout(env, interaction) {
     await postWebhook(env, buildWebhookPayload(workout));
 
     let historyNote = "";
-    if (useGitHub && githubSha) {
+    if (canWriteGithub && githubSha) {
       const updated = applyWorkoutToHistory(history, workout);
-      await putHistoryToGitHub(env, updated, githubSha, githubOwner, githubRepo);
-      historyNote = " History saved to GitHub.";
+      const putResult = await putHistoryToGitHub(env, updated, githubSha, githubOwner, githubRepo);
+      if (putResult.ok) {
+        historyNote = " History saved to GitHub.";
+      } else {
+        console.error("[workout] GitHub history write failed; workout still posted.", putResult);
+      }
     }
 
     await patchInteractionResponse(env, interaction, {

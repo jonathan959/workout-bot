@@ -11,6 +11,9 @@ import {
 const DEFAULT_OWNER = "jonathan959";
 const DEFAULT_REPO = "workout-bot";
 const HISTORY_PATH = "data/history.json";
+/** Exact Contents API URL (default branch). No query string — avoids some 400s from bad ref params. */
+const GITHUB_CONTENTS_GET_URL =
+  "https://api.github.com/repos/jonathan959/workout-bot/contents/data/history.json";
 
 function decodeGitHubFileContent(b64) {
   const clean = String(b64 || "").replace(/\s/g, "");
@@ -27,32 +30,107 @@ function encodeGitHubFileContent(text) {
   return btoa(bin);
 }
 
-function githubApiHeaders(token) {
+/**
+ * GitHub REST API headers (GET + PUT) — keep in sync.
+ */
+export function githubApiHeaders(token) {
+  const t = String(token || "").trim();
   return {
+    Authorization: `Bearer ${t}`,
     Accept: "application/vnd.github+json",
-    Authorization: `Bearer ${token}`,
-    "User-Agent": "workout-bot-cloudflare-worker",
     "X-GitHub-Api-Version": "2022-11-28",
+    "User-Agent": "workout-bot",
   };
 }
 
-export async function fetchHistoryAndShaFromGitHub(env) {
-  const token = env.GITHUB_TOKEN;
-  if (!token || !String(token).trim()) {
-    throw new Error("GITHUB_TOKEN is not set (use wrangler secret put GITHUB_TOKEN)");
+function headersToObject(res) {
+  const o = {};
+  res.headers.forEach((value, key) => {
+    o[key] = value;
+  });
+  return o;
+}
+
+export function logGitHubErrorResponse(label, res, bodyText) {
+  console.error(`[history-github] ${label} failed`, {
+    status: res.status,
+    statusText: res.statusText,
+    responseHeaders: headersToObject(res),
+    responseBody: bodyText,
+  });
+}
+
+async function fetchHistoryFromRawUrl(rawUrl) {
+  if (!rawUrl || !String(rawUrl).trim()) {
+    throw new Error("HISTORY_JSON_URL is not configured");
   }
-  const owner = env.GITHUB_REPO_OWNER || DEFAULT_OWNER;
-  const repo = env.GITHUB_REPO_NAME || DEFAULT_REPO;
-  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${HISTORY_PATH}?ref=main`;
-  const res = await fetch(url, { headers: githubApiHeaders(token) });
+  const res = await fetch(String(rawUrl).trim(), {
+    headers: { Accept: "application/json" },
+  });
   const text = await res.text();
   if (!res.ok) {
-    throw new Error(`GitHub GET ${HISTORY_PATH} failed: ${res.status} ${text.slice(0, 500)}`);
+    throw new Error(`History raw fetch failed: ${res.status} ${text.slice(0, 300)}`);
   }
-  const data = JSON.parse(text);
-  const jsonText = decodeGitHubFileContent(data.content);
-  const history = JSON.parse(jsonText);
-  return { history, sha: data.sha, owner, repo };
+  return JSON.parse(text);
+}
+
+/**
+ * Load history for /workout: try GitHub API first if token exists; on any failure fall back to HISTORY_JSON_URL.
+ * Returns sha/owner/repo only when GitHub GET succeeded (enables PUT).
+ */
+export async function loadHistoryForWorkout(env) {
+  const owner = env.GITHUB_REPO_OWNER || DEFAULT_OWNER;
+  const repo = env.GITHUB_REPO_NAME || DEFAULT_REPO;
+  const rawUrl = env.HISTORY_JSON_URL;
+  const token = env.GITHUB_TOKEN ? String(env.GITHUB_TOKEN).trim() : "";
+
+  if (token) {
+    try {
+      const res = await fetch(GITHUB_CONTENTS_GET_URL, {
+        headers: githubApiHeaders(token),
+      });
+      const text = await res.text();
+
+      if (res.ok) {
+        try {
+          const data = JSON.parse(text);
+          const jsonText = decodeGitHubFileContent(data.content);
+          const history = JSON.parse(jsonText);
+          return {
+            history,
+            sha: data.sha,
+            owner,
+            repo,
+            canWriteGithub: true,
+          };
+        } catch (parseErr) {
+          console.error(
+            "[history-github] GitHub GET OK but JSON/base64 parse failed",
+            parseErr?.message || parseErr,
+            "bodyPreview:",
+            text.slice(0, 400),
+          );
+        }
+      } else {
+        logGitHubErrorResponse("GET data/history.json (Contents API)", res, text);
+      }
+    } catch (err) {
+      console.error("[history-github] GitHub GET threw (network/exception)", err);
+    }
+
+    console.warn(
+      "[history-github] Falling back to HISTORY_JSON_URL after GitHub GET failure or parse error",
+    );
+  }
+
+  const history = await fetchHistoryFromRawUrl(rawUrl);
+  return {
+    history,
+    sha: null,
+    owner,
+    repo,
+    canWriteGithub: false,
+  };
 }
 
 function extractRepBottom(repStr) {
@@ -131,11 +209,26 @@ export function applyWorkoutToHistory(history, workout) {
   return next;
 }
 
+const GITHUB_CONTENTS_PUT_URL =
+  "https://api.github.com/repos/jonathan959/workout-bot/contents/data/history.json";
+
+/**
+ * PUT updated history. Same headers as GET. On failure logs full response; returns { ok }.
+ */
 export async function putHistoryToGitHub(env, history, sha, owner, repo) {
-  const token = env.GITHUB_TOKEN;
+  const token = env.GITHUB_TOKEN ? String(env.GITHUB_TOKEN).trim() : "";
+  if (!token) {
+    console.warn("[history-github] PUT skipped: no GITHUB_TOKEN");
+    return { ok: false, reason: "no_token" };
+  }
+
+  const putUrl =
+    owner === DEFAULT_OWNER && repo === DEFAULT_REPO
+      ? GITHUB_CONTENTS_PUT_URL
+      : `https://api.github.com/repos/${owner}/${repo}/contents/${HISTORY_PATH}`;
+
   const bodyStr = JSON.stringify(history, null, 2) + "\n";
-  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${HISTORY_PATH}`;
-  const res = await fetch(url, {
+  const res = await fetch(putUrl, {
     method: "PUT",
     headers: {
       ...githubApiHeaders(token),
@@ -150,7 +243,12 @@ export async function putHistoryToGitHub(env, history, sha, owner, repo) {
   });
   const text = await res.text();
   if (!res.ok) {
-    throw new Error(`GitHub PUT ${HISTORY_PATH} failed: ${res.status} ${text.slice(0, 800)}`);
+    logGitHubErrorResponse("PUT data/history.json (Contents API)", res, text);
+    return { ok: false, status: res.status, body: text };
   }
-  return JSON.parse(text);
+  try {
+    return { ok: true, data: JSON.parse(text) };
+  } catch {
+    return { ok: true, data: text };
+  }
 }
