@@ -1,0 +1,429 @@
+{
+  "day1": {
+    "back": [
+      {
+        "exercise": "Neutral Grip Lat Pulldown",
+        "muscle": "Back",
+        "reason": "Lower lat thickness peak load",
+        "rest": "2 min",
+        "cue": "Pull elbows to hips"
+      },
+      {
+        "exercise": "Straight Arm Pulldown rope",
+        "muscle": "Back",
+        "reason": "Lat isolation peak tension",
+        "rest": "90s",
+        "cue": "Feel lats fully stretch at top"
+      }
+    ],
+    "rearDelts": [
+      {
+        "exercise": "Bent Over Cable Fly",
+        "muscle": "Rear Delts",
+        "reason": "Rear delt peak load angle",
+        "rest": "60s",
+        "cue": "Lead with elbow back"
+      },
+      {
+        "exercise": "Rope Face Pull heavy",
+        "muscle": "Rear Delts",
+        "reason": "Rear delt peak week overload",
+        "rest": "60s",
+        "cue": "Pull to forehead elbows high"
+      }
+    ],
+    "biceps": [
+      {
+        "exercise": "Incline DB Curl",
+        "muscle": "Biceps",
+        "reason": "First bicep Pull A peak week",
+        "rest": "90s",
+        "cue": "Full stretch at bottom"
+      },
+      {
+        "exercise": "Drag Curl",
+        "muscle": "Biceps",
+        "reason": "Long head peak contraction",
+        "rest": "90s",
+        "cue": "Drag bar up the body"
+      },
+      {
+        "exercise": "Low Cable Curl",
+        "muscle": "Biceps",
+        "reason": "Constant tension lengthened",
+        "rest": "90s",
+        "cue": "Squeeze hard at top"
+      }
+    ],
+    "forearms": [
+      {
+        "exercise": "Reverse Curl EZ Bar",
+        "muscle": "Forearms",
+        "reason": "Brachioradialis peak load",
+        "rest": "60s",
+        "cue": "Control the descent"
+      }
+    ],
+    "core": [
+      {
+        "exercise": "Ab Wheel Rollout",
+        "muscle": "Core",
+        "reason": "Deep core peak load",
+        "rest": "60s",
+        "cue": "Brace core throughout"
+      }
+    ]
+  },
+  "day2": {
+    "chest": [
+      {
+        "exercise": "Incline DB Press",
+        "muscle": "Chest",
+        "reason": "Upper chest peak load",
+        "rest": "2-3 min",
+        "warmupRequired": true,
+        "cue": "Drive through upper chest not shoulders"
+      },
+      {
+        "exercise": "Cable Fly Low to High",
+        "muscle": "Chest",
+        "reason": "Upper chest peak tension",
+        "rest": "90s",
+        "cue": "Squeeze at peak control descent"
+      },
+      {
+        "exercise": "Cable Fly Mid Height",
+        "muscle": "Chest",
+        "reason": "Mid chest peak load",
+        "rest": "90s",
+        "cue": "Feel inner chest at peak"
+      }
+    ],
+    "shoulders": [
+      {
+        "exercise": "Cable Lateral Raise",
+        "muscle": "Shoulders",
+        "reason": "Side delt peak load",
+        "rest": "60s",
+        "cue": "Lead with elbow not hand"
+      },
+      {
+        "exercise": "Single Arm Cable OHP",
+        "muscle": "Shoulders",
+        "reason": "Shoulder compound peak",
+        "rest": "2 min",
+        "cue": "Drive up not forward"
+      },
+      {
+        "exercise": "Seated DB Lateral Raise",
+        "muscle": "Shoulders",
+        "reason": "Side delt peak overload",
+        "rest": "60s",
+        "cue": "Raise to ear height"
+      }
+    ],
+    "core": [
+      {
+        "exercise": "Hanging Leg Raise",
+        "muscle": "Core",
+        "reason": "Lower abs peak load",
+        "rest": "60s",
+        "cue": "Control descent no swinging"
+      }
+    ]
+  },
+  "day3": {
+    "glutes": [
+      {
+        "exercise": "Banded Hip Thrust",
+        "muscle": "Glutes",
+        "reason": "Peak glute activation with band",
+        "rest": "2-3 min",
+        "warmupRequired": true,
+        "cue": "Squeeze glutes hard at top"
+      },
+      {
+        "exercise": "Cable Kickback different angle",
+        "muscle": "Glutes",
+        "reason": "Glute peak load new angle",
+        "rest": "60s",
+        "cue": "Squeeze at full extension"
+      },
+      {
+        "exercise": "Cable Pull Through",
+        "muscle": "Glutes",
+        "reason": "Glute stretch peak load",
+        "rest": "90s",
+        "cue": "Hinge at hips not waist"
+      }
+    ],
+    "quadsAndGlutes": [
+      {
+        "exercise": "Leg Press feet high and wide",
+        "muscle": "Quads + Glutes",
+        "reason": "Peak load glute + quad",
+        "rest": "2 min",
+        "cue": "Drive through heels"
+      }
+    ],
+    "hamstrings": [
+      {
+        "exercise": "Lying Leg Curl",
+        "muscle": "Hamstrings",
+        "reason": "Hamstring peak load",
+        "rest": "90s",
+        "cue": "Curl heel to glute"
+      }
+    ],
+    "lowerBack": [
+      {
+        "exercise": "Machine Hyperextension light",
+        "muscle": "Lower Back",
+        "reason": "Lower back maintenance",
+        "rest": "60s",
+        "cue": "Squeeze glutes at top"
+      }
+    ],
+    "core": [
+      {
+        "exercise": "Ab Wheel Rollout",
+        "muscle": "Core",
+        "reason": "Deep core peak",
+        "rest": "60s",
+        "cue": "Brace core throughout"
+      }
+    ]
+  },
+  "day4": {
+    "triceps": [
+      {
+        "exercise": "Cable Overhead Extension rope",
+        "muscle": "Triceps",
+        "reason": "Long head peak load rope",
+        "rest": "90s",
+        "cue": "Feel stretch at very bottom"
+      },
+      {
+        "exercise": "Reverse Grip Pushdown",
+        "muscle": "Triceps",
+        "reason": "Medial head rarely trained",
+        "rest": "90s",
+        "cue": "Keep elbows tucked in"
+      },
+      {
+        "exercise": "DB Skull Crusher",
+        "muscle": "Triceps",
+        "reason": "Peak load stretch position",
+        "rest": "2 min",
+        "cue": "Lower past head for stretch"
+      }
+    ],
+    "biceps": [
+      {
+        "exercise": "Incline DB Curl",
+        "muscle": "Biceps",
+        "reason": "First bicep arms day peak",
+        "rest": "90s",
+        "cue": "Full stretch at bottom"
+      },
+      {
+        "exercise": "Hammer Curl",
+        "muscle": "Biceps",
+        "reason": "Brachialis peak load",
+        "rest": "90s",
+        "cue": "Neutral grip throughout"
+      },
+      {
+        "exercise": "Machine Curl",
+        "muscle": "Biceps",
+        "reason": "Peak load constant tension",
+        "rest": "90s",
+        "cue": "Squeeze hard at top"
+      }
+    ],
+    "forearms": [
+      {
+        "exercise": "Cable Reverse Curl",
+        "muscle": "Forearms",
+        "reason": "Brachioradialis peak load",
+        "rest": "60s",
+        "cue": "Slow and controlled"
+      },
+      {
+        "exercise": "Behind Back Wrist Curl",
+        "muscle": "Forearms",
+        "reason": "Forearm flexor peak load",
+        "rest": "60s",
+        "cue": "Full wrist ROM"
+      }
+    ],
+    "core": [
+      {
+        "exercise": "Cable Crunch",
+        "muscle": "Core",
+        "reason": "Weighted abs peak load",
+        "rest": "60s",
+        "cue": "Ribs to hips not head down"
+      }
+    ],
+    "secondary": [
+      {
+        "exercise": "Cable Kickback",
+        "muscle": "Glutes",
+        "reason": "Glute second hit peak week",
+        "rest": "60s",
+        "cue": "Squeeze at full extension"
+      },
+      {
+        "exercise": "Lying Leg Curl",
+        "muscle": "Hamstrings",
+        "reason": "Hamstring second hit peak week",
+        "rest": "90s",
+        "cue": "Curl heel to glute"
+      }
+    ]
+  },
+  "day5": {
+    "back": [
+      {
+        "exercise": "Chest Supported Machine Row",
+        "muscle": "Back",
+        "reason": "Peak load thickness zero lower back",
+        "rest": "2 min",
+        "warmupRequired": true,
+        "cue": "Pull to lower chest"
+      },
+      {
+        "exercise": "Single Arm Cable Row",
+        "muscle": "Back",
+        "reason": "Unilateral peak load",
+        "rest": "2 min",
+        "cue": "Elbow past your back"
+      },
+      {
+        "exercise": "Close Grip Lat Pulldown",
+        "muscle": "Back",
+        "reason": "Lower lat peak load",
+        "rest": "2 min",
+        "cue": "Pull elbows to hips"
+      }
+    ],
+    "rearDelts": [
+      {
+        "exercise": "Machine Reverse Fly",
+        "muscle": "Rear Delts",
+        "reason": "Peak isolation rear delt",
+        "rest": "60s",
+        "cue": "Light weight feel rear delt"
+      },
+      {
+        "exercise": "Bent Over Cable Fly",
+        "muscle": "Rear Delts",
+        "reason": "Rear delt peak load angle",
+        "rest": "60s",
+        "cue": "Lead with elbow back"
+      }
+    ],
+    "biceps": [
+      {
+        "exercise": "Incline DB Curl",
+        "muscle": "Biceps",
+        "reason": "First bicep Pull B peak",
+        "rest": "90s",
+        "cue": "Full stretch at bottom"
+      },
+      {
+        "exercise": "Machine Curl",
+        "muscle": "Biceps",
+        "reason": "Peak load constant tension",
+        "rest": "90s",
+        "cue": "Squeeze hard at top"
+      },
+      {
+        "exercise": "Low Cable Curl",
+        "muscle": "Biceps",
+        "reason": "Lengthened position peak",
+        "rest": "90s",
+        "cue": "Full ROM every rep"
+      }
+    ],
+    "forearms": [
+      {
+        "exercise": "Behind Back Wrist Curl",
+        "muscle": "Forearms",
+        "reason": "Forearm flexor peak load",
+        "rest": "60s",
+        "cue": "Full wrist ROM"
+      }
+    ],
+    "core": [
+      {
+        "exercise": "Hanging Leg Raise",
+        "muscle": "Core",
+        "reason": "Lower abs peak load",
+        "rest": "60s",
+        "cue": "Control descent no swinging"
+      }
+    ]
+  },
+  "day6": {
+    "chest": [
+      {
+        "exercise": "Flat DB Press",
+        "muscle": "Chest",
+        "reason": "Mid chest peak load",
+        "rest": "2-3 min",
+        "warmupRequired": true,
+        "cue": "Drive through chest not shoulders"
+      },
+      {
+        "exercise": "Cable Fly High to Low",
+        "muscle": "Chest",
+        "reason": "Lower chest peak tension",
+        "rest": "90s",
+        "cue": "Squeeze at bottom of movement"
+      }
+    ],
+    "shoulders": [
+      {
+        "exercise": "Cable Lateral Raise",
+        "muscle": "Shoulders",
+        "reason": "Side delt peak second hit",
+        "rest": "60s",
+        "cue": "Lead with elbow not hand"
+      },
+      {
+        "exercise": "Reverse Cable Fly",
+        "muscle": "Shoulders",
+        "reason": "Rear delt peak second session",
+        "rest": "60s",
+        "cue": "Light weight feel rear delt"
+      }
+    ],
+    "triceps": [
+      {
+        "exercise": "Cable Overhead Extension rope",
+        "muscle": "Triceps",
+        "reason": "Long head peak second hit",
+        "rest": "90s",
+        "cue": "Feel stretch at very bottom"
+      },
+      {
+        "exercise": "DB Skull Crusher",
+        "muscle": "Triceps",
+        "reason": "All 3 heads peak overload",
+        "rest": "2 min",
+        "cue": "Lower past head for stretch"
+      }
+    ],
+    "core": [
+      {
+        "exercise": "Cable Crunch",
+        "muscle": "Core",
+        "reason": "Weighted abs peak",
+        "rest": "60s",
+        "cue": "Ribs to hips not head down"
+      }
+    ]
+  }
+}

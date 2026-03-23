@@ -39,6 +39,10 @@ async function generateWorkout(
     dayLabel,
     recentHistory,
     lastSessionNote,
+    progressionLines:
+      extraContext.progressionLines ||
+      "None yet — use bottom of rep ranges.",
+    profile,
   });
 
   const userParts = [
@@ -46,9 +50,10 @@ async function generateWorkout(
     `SUBSTITUTIONS_JSON:\n${JSON.stringify(substitutions)}`,
     `EXERCISE_DAY_PLAN_JSON:\n${JSON.stringify(extraContext.dayPlan || {}, null, 2)}`,
     `MESOCYCLE_VARIATIONS_JSON:\n${JSON.stringify(extraContext.mesoVars || {}, null, 2)}`,
+    `PROGRESSION_TRACKING_JSON:\n${JSON.stringify(extraContext.progressionTracking || {}, null, 2)}`,
     `RULES: Each "reason" field must be at most ${profile.sessionFormat.reasonMaxWords} words.`,
     `Deload week rules if phase is Deload: ${JSON.stringify(profile.progression.deload)}`,
-    `Week-in-mesocycle (1-4): ${extraContext.weekInMeso}. If week 3, only last isolation may have dropset; never hip thrusts or RDL.`,
+    `Week-in-mesocycle (1-4): ${extraContext.weekInMeso}. If week 3 and phase is not Deload, only last isolation may have dropset; never hip thrusts or RDL.`,
   ].join("\n\n");
 
   const text = await generateContentGemini({

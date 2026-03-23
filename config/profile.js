@@ -11,11 +11,11 @@ module.exports = {
 
   split: {
     day1: "Pull A — Back Width + Rear Delts + Biceps + Forearms",
-    day2: "Push A — Chest + Shoulders",
+    day2: "Push A — Chest + Shoulders only (no triceps)",
     day3: "Legs A — Glute Focus",
-    day4: "Arms — Biceps + Triceps + Forearms (all fresh)",
+    day4: "Arms — Triceps first (priority) + Biceps + Forearms + 1 glute + 1 hamstring at end",
     day5: "Pull B — Back Thickness + Rear Delts + Biceps",
-    day6: "Legs B — Hamstring + Lower Quad + Glutes",
+    day6: "Push B — Chest + Shoulders + Triceps second hit",
   },
 
   strengths: ["back", "chest", "glutes"],
@@ -129,6 +129,10 @@ module.exports = {
       lowerBack: "complete rest from all loading",
       legs: "hip thrusts bodyweight only, no leg press",
       focus: "mind muscle connection only",
+      excludeLowerBackExercises: true,
+      hipThrustBodyweightOnly: true,
+      noDropsets: true,
+      progressionNote: "Deload week — focus on form not load",
     },
   },
 

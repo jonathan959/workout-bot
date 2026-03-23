@@ -18,6 +18,20 @@ function buildRecentHistoryString(history) {
     .join("\n");
 }
 
+function buildProgressionLines(tracking) {
+  if (!tracking || typeof tracking !== "object") {
+    return "None yet — use bottom of rep ranges.";
+  }
+  const lines = Object.entries(tracking).map(([name, d]) => {
+    const lw = d.lastWeight != null ? String(d.lastWeight) : "—";
+    const lr = d.lastReps != null ? d.lastReps : "?";
+    const tr = d.targetReps != null ? d.targetReps : Number(lr) + 1;
+    return `${name}: last session ${lr} reps at ${lw} → target ${tr} reps today`;
+  });
+  if (!lines.length) return "None yet — use bottom of rep ranges.";
+  return lines.join("\n");
+}
+
 function getDayExercisePlan(mesocycleNum, dayKey) {
   const mesos = exercises.mesocycles || {};
   const meso = mesos[mesocycleNum] || mesos[String(mesocycleNum)] || mesos[1] || mesos["1"];
@@ -42,6 +56,8 @@ function computeRunContext(history, profile) {
   const recentHistory = buildRecentHistoryString(history);
   const lastSessionNote = history.lastProgressionNote || history.lastSessionNote || "None";
   const dayLabel = getDayLabel(dayNum, profile.split);
+  const progressionTracking = history.progressionTracking || {};
+  const progressionLines = buildProgressionLines(progressionTracking);
 
   return {
     dayNum,
@@ -55,6 +71,8 @@ function computeRunContext(history, profile) {
     recentHistory,
     lastSessionNote,
     dayLabel,
+    progressionTracking,
+    progressionLines,
   };
 }
 
@@ -62,6 +80,7 @@ module.exports = {
   DAY_KEYS,
   getDayLabel,
   buildRecentHistoryString,
+  buildProgressionLines,
   getDayExercisePlan,
   computeRunContext,
 };
