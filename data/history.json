@@ -1,5 +1,5 @@
 {
-  "currentDay": 2,
+  "currentDay": 3,
   "currentWeek": 1,
   "currentMesocycle": 1,
   "phase": "accumulation",
@@ -52,6 +52,48 @@
       "lastWeight": "—",
       "targetReps": 11,
       "repRange": "10-12"
+    },
+    "Incline DB Press": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Fly Low to High": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Fly Mid Height": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Lateral Raise": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Single Arm Cable OHP": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Seated DB Lateral Raise": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Hanging Leg Raise": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
     }
   },
   "recentSessions": [
@@ -69,8 +111,22 @@
         "Reverse Curl (EZ Bar)",
         "Cable Crunch"
       ]
+    },
+    {
+      "date": "2026-03-23",
+      "day": "Day 2",
+      "focus": "Push A — Chest + Shoulders only (no triceps)",
+      "exercises": [
+        "Incline DB Press",
+        "Cable Fly Low to High",
+        "Cable Fly Mid Height",
+        "Cable Lateral Raise",
+        "Single Arm Cable OHP",
+        "Seated DB Lateral Raise",
+        "Hanging Leg Raise"
+      ]
     }
   ],
-  "lastProgressionNote": "Aim to complete 10 reps for all sets on all exercises. Once you can do 12 reps for all working sets of an exercise, increase the weight slightly next session and reset to 10 reps.",
-  "lastSessionNote": "Aim to complete 10 reps for all sets on all exercises. Once you can do 12 reps for all working sets of an exercise, increase the weight slightly next session and reset to 10 reps."
+  "lastProgressionNote": "For each exercise, aim for 10-12 reps per set. Once you can achieve 12 reps for all 3 working sets, increase the weight slightly next session and reset to 10 reps.",
+  "lastSessionNote": "For each exercise, aim for 10-12 reps per set. Once you can achieve 12 reps for all 3 working sets, increase the weight slightly next session and reset to 10 reps."
 }
