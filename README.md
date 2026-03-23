@@ -1,6 +1,6 @@
 # Discord Daily Workout Bot
 
-AI-generated hypertrophy workouts (Google Gemini), posted to Discord via webhook. Schedules run on **GitHub Actions** (Mon–Sat). Optional **`/workout`** slash command via **Cloudflare Workers**.
+AI-generated hypertrophy workouts (Google Gemini), posted to Discord via webhook. Schedules run on **GitHub Actions** (Mon–Sat daily workout + **Monday weekly summary**). Optional **`/workout`** and **`/sub`** slash commands via **Cloudflare Workers**.
 
 ## Stack
 
@@ -32,6 +32,7 @@ AI-generated hypertrophy workouts (Google Gemini), posted to Discord via webhook
    - `GITHUB_TOKEN` — optional; Actions uses the default `GITHUB_TOKEN` for commits
    - `HISTORY_JSON_URL` — raw URL to `data/history.json` on GitHub (for the Worker only), e.g.  
      `https://raw.githubusercontent.com/OWNER/REPO/main/data/history.json`
+   - `DISCORD_SUMMARY_WEBHOOK_URL` — webhook for the **weekly plan** embed (used by `weekly-summary` Action only)
 
 4. **Run locally**
 
@@ -40,6 +41,12 @@ AI-generated hypertrophy workouts (Google Gemini), posted to Discord via webhook
    ```
 
    This runs `node src/generate-workout.js`, posts to Discord, and updates `data/history.json`.
+
+   ```bash
+   npm run weekly-summary
+   ```
+
+   Posts the **week-ahead** embed to `DISCORD_SUMMARY_WEBHOOK_URL` (reads `data/history.json` only).
 
 ### Editing `config/*.js`
 
@@ -59,12 +66,15 @@ Commit both the `.js` and updated `.json` files.
 
    - `GEMINI_API_KEY`
    - `DISCORD_WEBHOOK_URL`
+   - `DISCORD_SUMMARY_WEBHOOK_URL` — for **Weekly Summary** (Monday plan embed)
 
 3. Workflow **Daily Workout** runs at **15:00 UTC Monday–Saturday** (`0 15 * * 1-6`). It installs deps, runs the generator, then commits `data/history.json` if it changed.
 
-4. Grant **Actions** write permission to contents (the workflow uses `contents: write` and `git push`).
+4. Workflow **Weekly Summary** runs **Mondays 12:00 UTC** (`0 12 * * 1`) and can be triggered manually. It uses **Node 22**, runs `src/weekly-summary.js`, and commits `data/history.json` only if that file changed.
 
-## Cloudflare Worker (`/workout`)
+5. Grant **Actions** write permission to contents (the workflow uses `contents: write` and `git push`).
+
+## Cloudflare Worker (`/workout`, `/sub`)
 
 1. Install Wrangler: `npm install` (includes `wrangler` devDependency).
 
@@ -90,7 +100,7 @@ Commit both the `.js` and updated `.json` files.
 5. In **Discord Developer Portal** → your app → **Interactions** → **Interactions Endpoint URL**:  
    `https://<your-worker-subdomain>.workers.dev/`
 
-6. **Register the slash command** (once, or after changing commands):
+6. **Register slash commands** (`/workout`, `/sub`) after changing command definitions:
 
    ```bash
    node scripts/register-slash-command.js

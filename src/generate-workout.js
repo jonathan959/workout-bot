@@ -1,3 +1,6 @@
+/**
+ * Daily workout pipeline. Gemini system prompt + strict exercise rules live in src/prompts.js.
+ */
 require("dotenv").config();
 
 const path = require("path");

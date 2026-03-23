@@ -103,6 +103,22 @@ bent over barbell rows, T-bar rows, pendlay rows,
 calf raises, upright rows, behind the neck press,
 any heavy spinal flexion under load
 
+STRICT EXERCISE SELECTION (NON-NEGOTIABLE):
+- NEVER use dumbbell reverse fly for rear delts. ALWAYS use cable reverse fly OR cable face pull instead. Rear delt work must be CABLES ONLY — constant tension is mandatory.
+- On ALL Pull days (Day 1 Pull A and Day 5 Pull B), the FIRST biceps exercise MUST ALWAYS be Incline DB Curl (maximum long-head stretch). NEVER start biceps with preacher curl, machine curl, or spider curl on Pull days.
+- NEVER place two rear delt exercises back-to-back. Always separate the two rear delt movements with at least one biceps OR forearm exercise in between.
+- Rear delt exercises must ALWAYS use cables or machines — NEVER free weights (no DB rear fly, no plates) for rear delts.
+
+PULL DAY EXERCISE ORDER (Day 1 and Day 5 — enforce this exact order in "exercises" array):
+1. Back — exercise 1 (compound / primary back)
+2. Back — exercise 2 (isolation / secondary back)
+3. Rear delts — exercise 1 (cable only: reverse fly OR face pull)
+4. Biceps — exercise 1 (MUST be Incline DB Curl)
+5. Rear delts — exercise 2 (cable or machine only)
+6. Biceps — exercise 2
+7. Forearms — one exercise
+8. Core — one weighted ab exercise
+
 RECENT SESSIONS TO AVOID REPEATING: ${recentHistory}
 LAST SESSION PROGRESSION NOTE: ${lastSessionNote}
 

@@ -1,0 +1,32 @@
+name: Weekly Summary
+
+on:
+  schedule:
+    - cron: "0 12 * * 1"
+  workflow_dispatch:
+
+jobs:
+  weekly-summary:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install
+      - run: node src/weekly-summary.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DISCORD_SUMMARY_WEBHOOK_URL: ${{ secrets.DISCORD_SUMMARY_WEBHOOK_URL }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      - name: Commit history if changed
+        run: |
+          git config user.name "Workout Bot"
+          git config user.email "bot@workoutbot.com"
+          git add data/history.json
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: sync history $(date +%Y-%m-%d)"
+            git push
+          fi

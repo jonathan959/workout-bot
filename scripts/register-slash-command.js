@@ -1,5 +1,5 @@
 /**
- * One-time (or when you change the command): register global slash /workout with Discord.
+ * Register global slash commands with Discord (replaces full command list).
  * Requires: DISCORD_BOT_TOKEN, DISCORD_APPLICATION_ID in .env
  *
  *   node scripts/register-slash-command.js
@@ -14,10 +14,25 @@ if (!token || !appId) {
   process.exit(1);
 }
 
+/** @see https://discord.com/developers/docs/interactions/application-commands#applicationcommandoptiontype */
+const OPTION_TYPE_STRING = 3;
+
 const commands = [
   {
     name: "workout",
-    description: "Generate today’s workout with Gemini and post to the webhook channel",
+    description: "Generate today's personalised workout",
+  },
+  {
+    name: "sub",
+    description: "Get a substitution for an exercise",
+    options: [
+      {
+        type: OPTION_TYPE_STRING,
+        name: "exercise",
+        description: "The exercise you want to substitute",
+        required: true,
+      },
+    ],
   },
 ];
 

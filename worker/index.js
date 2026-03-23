@@ -1,10 +1,7 @@
 /**
- * Cloudflare Worker — Discord slash `/workout` (Interaction endpoint).
- * No Node built-ins: ESM + fetch + JSON config only.
+ * Cloudflare Worker — Discord slash `/workout` and `/sub`.
  *
- * Deploy:
- *   npx wrangler deploy
- *
+ * Deploy: npx wrangler deploy
  * Discord Developer Portal → Interactions Endpoint URL → your workers.dev URL
  */
 
@@ -14,6 +11,7 @@ import profile from "../config/profile.json";
 import { computeRunContext } from "./run-context.mjs";
 import { generateWorkoutFromContext } from "./workout-gen.mjs";
 import { buildWebhookPayload } from "./discord-embed.mjs";
+import { getSubstitutionJson, buildSubstitutionEmbed } from "./sub-handler.mjs";
 
 const router = Router();
 
@@ -81,6 +79,32 @@ async function handleWorkout(env, interaction) {
   }
 }
 
+async function handleSub(env, interaction) {
+  try {
+    const opt = interaction.data.options?.find((o) => o.name === "exercise");
+    const exercise = opt?.value;
+    if (!exercise || !String(exercise).trim()) {
+      throw new Error("Missing required option: exercise");
+    }
+
+    const result = await getSubstitutionJson(env, String(exercise));
+    await postWebhook(env, { embeds: [buildSubstitutionEmbed(result)] });
+
+    await patchInteractionResponse(env, interaction, {
+      content: "✅ Substitution posted to the webhook channel.",
+    });
+  } catch (e) {
+    console.error(e);
+    try {
+      await patchInteractionResponse(env, interaction, {
+        content: `❌ Error: ${e.message || String(e)}`,
+      });
+    } catch (_) {
+      /* ignore */
+    }
+  }
+}
+
 router.post("/", async (request, env, ctx) => {
   const body = await request.text();
   const sig = request.headers.get("X-Signature-Ed25519");
@@ -106,6 +130,13 @@ router.post("/", async (request, env, ctx) => {
 
   if (interaction.type === 2 && interaction.data?.name === "workout") {
     ctx.waitUntil(handleWorkout(env, interaction));
+    return new Response(JSON.stringify({ type: 5 }), {
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  if (interaction.type === 2 && interaction.data?.name === "sub") {
+    ctx.waitUntil(handleSub(env, interaction));
     return new Response(JSON.stringify({ type: 5 }), {
       headers: { "Content-Type": "application/json" },
     });
