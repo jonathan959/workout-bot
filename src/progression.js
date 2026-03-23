@@ -91,7 +91,7 @@ function appendRecentSession(history, workout) {
     focus: workout.focus || "",
     exercises: names,
   });
-  while (sessions.length > 12) sessions.shift();
+  while (sessions.length > 6) sessions.shift();
   return sessions;
 }
 

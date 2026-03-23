@@ -2,6 +2,8 @@ name = "workout-bot"
 main = "worker/index.js"
 compatibility_date = "2024-09-23"
 
-# Public raw URL for Worker context (same file Actions updates on schedule)
+# Public raw URL for Worker when GITHUB_TOKEN is not set (read-only fallback).
+# GITHUB_TOKEN: set with `npx wrangler secret put GITHUB_TOKEN` — do NOT put a real PAT in this file.
+# Optional overrides: GITHUB_REPO_OWNER, GITHUB_REPO_NAME (default jonathan959/workout-bot).
 [vars]
 HISTORY_JSON_URL = "https://raw.githubusercontent.com/jonathan959/workout-bot/main/data/history.json"

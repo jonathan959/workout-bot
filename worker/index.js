@@ -1,6 +1,9 @@
 /**
  * Cloudflare Worker — Discord slash `/workout` and `/sub`.
  *
+ * When `GITHUB_TOKEN` is set (wrangler secret), `/workout` loads history from the
+ * GitHub API and writes updates back after each generation (see history-github.mjs).
+ *
  * Deploy: npx wrangler deploy
  * Discord Developer Portal → Interactions Endpoint URL → your workers.dev URL
  */
@@ -12,6 +15,11 @@ import { computeRunContext } from "./run-context.mjs";
 import { generateWorkoutFromContext } from "./workout-gen.mjs";
 import { buildWebhookPayload } from "./discord-embed.mjs";
 import { getSubstitutionJson, buildSubstitutionEmbed } from "./sub-handler.mjs";
+import {
+  fetchHistoryAndShaFromGitHub,
+  applyWorkoutToHistory,
+  putHistoryToGitHub,
+} from "./history-github.mjs";
 
 const router = Router();
 
@@ -53,7 +61,22 @@ async function postWebhook(env, payload) {
 
 async function handleWorkout(env, interaction) {
   try {
-    const history = await fetchHistory(env.HISTORY_JSON_URL);
+    const useGitHub = Boolean(env.GITHUB_TOKEN && String(env.GITHUB_TOKEN).trim());
+    let history;
+    let githubSha = null;
+    let githubOwner;
+    let githubRepo;
+
+    if (useGitHub) {
+      const gh = await fetchHistoryAndShaFromGitHub(env);
+      history = gh.history;
+      githubSha = gh.sha;
+      githubOwner = gh.owner;
+      githubRepo = gh.repo;
+    } else {
+      history = await fetchHistory(env.HISTORY_JSON_URL);
+    }
+
     const runCtx = computeRunContext(history, profile);
     const workout = await generateWorkoutFromContext(runCtx, env.GEMINI_API_KEY, {
       model: env.GEMINI_MODEL || "gemini-2.5-flash",
@@ -64,8 +87,15 @@ async function handleWorkout(env, interaction) {
 
     await postWebhook(env, buildWebhookPayload(workout));
 
+    let historyNote = "";
+    if (useGitHub && githubSha) {
+      const updated = applyWorkoutToHistory(history, workout);
+      await putHistoryToGitHub(env, updated, githubSha, githubOwner, githubRepo);
+      historyNote = " History saved to GitHub.";
+    }
+
     await patchInteractionResponse(env, interaction, {
-      content: "✅ Workout generated and posted to the webhook channel.",
+      content: `✅ Workout generated and posted to the webhook channel.${historyNote}`,
     });
   } catch (e) {
     console.error(e);
