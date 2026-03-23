@@ -1,5 +1,5 @@
 {
-  "currentDay": 3,
+  "currentDay": 4,
   "currentWeek": 1,
   "currentMesocycle": 1,
   "phase": "accumulation",
@@ -94,6 +94,54 @@
       "lastWeight": "—",
       "targetReps": 11,
       "repRange": "10-12"
+    },
+    "Machine Hip Thrust": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Leg Press (feet high and wide)": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Lying Leg Curl": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Leg Extension": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Pull Through": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Kickback": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Machine Hyperextension (light)": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Ab Wheel Rollout (Weighted)": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
     }
   },
   "recentSessions": [
@@ -125,8 +173,23 @@
         "Seated DB Lateral Raise",
         "Hanging Leg Raise"
       ]
+    },
+    {
+      "date": "2026-03-23",
+      "day": "Day 3",
+      "focus": "Legs A — Glute Focus",
+      "exercises": [
+        "Machine Hip Thrust",
+        "Leg Press (feet high and wide)",
+        "Lying Leg Curl",
+        "Leg Extension",
+        "Cable Pull Through",
+        "Cable Kickback",
+        "Machine Hyperextension (light)",
+        "Ab Wheel Rollout (Weighted)"
+      ]
     }
   ],
-  "lastProgressionNote": "",
-  "lastSessionNote": ""
+  "lastProgressionNote": "Track your reps and weight this week to establish your baseline for progression.",
+  "lastSessionNote": "Track your reps and weight this week to establish your baseline for progression."
 }
