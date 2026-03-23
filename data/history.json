@@ -1,5 +1,5 @@
 {
-  "currentDay": 2,
+  "currentDay": 3,
   "currentWeek": 1,
   "currentMesocycle": 1,
   "phase": "accumulation",
@@ -52,6 +52,48 @@
       "lastWeight": "—",
       "targetReps": 11,
       "repRange": "10-12"
+    },
+    "Incline DB Press": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Fly Low to High": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Lateral Raise": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Fly Mid Height": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Single Arm Cable OHP": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Seated DB Lateral Raise": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Hanging Leg Raise": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
     }
   },
   "recentSessions": [
@@ -68,6 +110,20 @@
         "Cable Curl",
         "Reverse Curl (EZ Bar)",
         "Cable Crunch"
+      ]
+    },
+    {
+      "date": "2026-03-23",
+      "day": "Day 2",
+      "focus": "Push A — Chest + Shoulders",
+      "exercises": [
+        "Incline DB Press",
+        "Cable Fly Low to High",
+        "Cable Lateral Raise",
+        "Cable Fly Mid Height",
+        "Single Arm Cable OHP",
+        "Seated DB Lateral Raise",
+        "Hanging Leg Raise"
       ]
     }
   ],
