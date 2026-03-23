@@ -31,10 +31,37 @@ function encodeGitHubFileContent(text) {
 }
 
 /**
+ * Wrangler secrets sometimes include wrapping quotes or a duplicated "Bearer " prefix;
+ * that can produce GitHub 400 with an empty body.
+ */
+export function sanitizeGithubToken(raw) {
+  if (raw == null) return "";
+  let s = String(raw).replace(/^\uFEFF/, "").trim();
+  if (
+    (s.startsWith('"') && s.endsWith('"')) ||
+    (s.startsWith("'") && s.endsWith("'"))
+  ) {
+    s = s.slice(1, -1).trim();
+  }
+  if (/^Bearer\s+/i.test(s)) {
+    s = s.replace(/^Bearer\s+/i, "").trim();
+  }
+  return s;
+}
+
+function githubContentsHeadersNoAuth() {
+  return {
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "User-Agent": "workout-bot",
+  };
+}
+
+/**
  * GitHub REST API headers (GET + PUT) — keep in sync.
  */
 export function githubApiHeaders(token) {
-  const t = String(token || "").trim();
+  const t = sanitizeGithubToken(token);
   return {
     Authorization: `Bearer ${t}`,
     Accept: "application/vnd.github+json",
@@ -51,13 +78,21 @@ function headersToObject(res) {
   return o;
 }
 
-export function logGitHubErrorResponse(label, res, bodyText) {
+export function logGitHubErrorResponse(label, res, bodyText, extra = {}) {
   console.error(`[history-github] ${label} failed`, {
     status: res.status,
     statusText: res.statusText,
     responseHeaders: headersToObject(res),
     responseBody: bodyText,
+    ...extra,
   });
+}
+
+function parseContentsJson(text) {
+  const data = JSON.parse(text);
+  const jsonText = decodeGitHubFileContent(data.content);
+  const history = JSON.parse(jsonText);
+  return { history, sha: data.sha };
 }
 
 async function fetchHistoryFromRawUrl(rawUrl) {
@@ -82,7 +117,7 @@ export async function loadHistoryForWorkout(env) {
   const owner = env.GITHUB_REPO_OWNER || DEFAULT_OWNER;
   const repo = env.GITHUB_REPO_NAME || DEFAULT_REPO;
   const rawUrl = env.HISTORY_JSON_URL;
-  const token = env.GITHUB_TOKEN ? String(env.GITHUB_TOKEN).trim() : "";
+  const token = sanitizeGithubToken(env.GITHUB_TOKEN);
 
   if (token) {
     try {
@@ -93,12 +128,10 @@ export async function loadHistoryForWorkout(env) {
 
       if (res.ok) {
         try {
-          const data = JSON.parse(text);
-          const jsonText = decodeGitHubFileContent(data.content);
-          const history = JSON.parse(jsonText);
+          const { history, sha } = parseContentsJson(text);
           return {
             history,
-            sha: data.sha,
+            sha,
             owner,
             repo,
             canWriteGithub: true,
@@ -112,7 +145,47 @@ export async function loadHistoryForWorkout(env) {
           );
         }
       } else {
-        logGitHubErrorResponse("GET data/history.json (Contents API)", res, text);
+        logGitHubErrorResponse("GET data/history.json (Contents API)", res, text, {
+          tokenLength: token.length,
+          hint:
+            res.status === 400 && !String(text).trim()
+              ? "Empty 400 often means a bad Authorization value — re-save secret with wrangler secret put GITHUB_TOKEN (raw PAT only, no quotes, no Bearer prefix)."
+              : undefined,
+        });
+
+        // Recover: public repos allow unauthenticated Contents GET; bad/mangled PAT can yield 400 + empty body.
+        if (res.status === 400 && !String(text).trim()) {
+          console.warn(
+            "[history-github] Retrying GET without Authorization (public repo)",
+          );
+          const res2 = await fetch(GITHUB_CONTENTS_GET_URL, {
+            headers: githubContentsHeadersNoAuth(),
+          });
+          const text2 = await res2.text();
+          if (res2.ok) {
+            try {
+              const { history, sha } = parseContentsJson(text2);
+              return {
+                history,
+                sha,
+                owner,
+                repo,
+                canWriteGithub: true,
+              };
+            } catch (parseErr) {
+              console.error(
+                "[history-github] Anonymous GET OK but parse failed",
+                parseErr?.message || parseErr,
+              );
+            }
+          } else {
+            logGitHubErrorResponse(
+              "GET data/history.json (anonymous retry)",
+              res2,
+              text2,
+            );
+          }
+        }
       }
     } catch (err) {
       console.error("[history-github] GitHub GET threw (network/exception)", err);
@@ -216,7 +289,7 @@ const GITHUB_CONTENTS_PUT_URL =
  * PUT updated history. Same headers as GET. On failure logs full response; returns { ok }.
  */
 export async function putHistoryToGitHub(env, history, sha, owner, repo) {
-  const token = env.GITHUB_TOKEN ? String(env.GITHUB_TOKEN).trim() : "";
+  const token = sanitizeGithubToken(env.GITHUB_TOKEN);
   if (!token) {
     console.warn("[history-github] PUT skipped: no GITHUB_TOKEN");
     return { ok: false, reason: "no_token" };
