@@ -1,9 +1,76 @@
 {
-  "currentDay": 1,
+  "currentDay": 2,
   "currentWeek": 1,
   "currentMesocycle": 1,
   "phase": "accumulation",
-  "lastUpdated": "2026-03-22",
-  "progressionTracking": {},
-  "recentSessions": []
+  "lastUpdated": "2026-03-23",
+  "progressionTracking": {
+    "Wide Grip Lat Pulldown": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Straight Arm Cable Pulldown": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Reverse Fly": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Incline DB Curl": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Face Pull": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Curl": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Reverse Curl (EZ Bar)": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Crunch": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    }
+  },
+  "recentSessions": [
+    {
+      "date": "2026-03-23",
+      "day": "Day 1",
+      "focus": "Pull A — Back Width + Rear Delts + Biceps + Forearms",
+      "exercises": [
+        "Wide Grip Lat Pulldown",
+        "Straight Arm Cable Pulldown",
+        "Cable Reverse Fly",
+        "Incline DB Curl",
+        "Face Pull",
+        "Cable Curl",
+        "Reverse Curl (EZ Bar)",
+        "Cable Crunch"
+      ]
+    }
+  ],
+  "lastProgressionNote": "",
+  "lastSessionNote": ""
 }
