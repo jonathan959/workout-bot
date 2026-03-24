@@ -1,9 +1,9 @@
 {
-  "currentDay": 4,
+  "currentDay": 5,
   "currentWeek": 1,
   "currentMesocycle": 1,
   "phase": "accumulation",
-  "lastUpdated": "2026-03-23",
+  "lastUpdated": "2026-03-24",
   "progressionTracking": {
     "Wide Grip Lat Pulldown": {
       "lastReps": 10,
@@ -136,6 +136,48 @@
       "lastWeight": "—",
       "targetReps": 11,
       "repRange": "10-12"
+    },
+    "Overhead Cable Extension": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Rope Pushdown": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "EZ Bar Skull Crusher": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Hammer Curl": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Curl (low pulley)": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Reverse Curl": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Behind Back Wrist Curl": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
     }
   },
   "recentSessions": [
@@ -181,8 +223,26 @@
         "Machine Hyperextension (light)",
         "Ab Wheel Rollout"
       ]
+    },
+    {
+      "date": "2026-03-24",
+      "day": "Day 4",
+      "focus": "Arms — Triceps first (priority) + Biceps + Forearms + Glutes + Hamstrings",
+      "exercises": [
+        "Overhead Cable Extension",
+        "Rope Pushdown",
+        "EZ Bar Skull Crusher",
+        "Incline DB Curl",
+        "Hammer Curl",
+        "Cable Curl (low pulley)",
+        "Cable Reverse Curl",
+        "Behind Back Wrist Curl",
+        "Cable Crunch",
+        "Cable Kickback",
+        "Lying Leg Curl"
+      ]
     }
   ],
-  "lastProgressionNote": "For each exercise, aim for 10-12 reps per set. Once you can achieve 12 reps for all 3 working sets, increase the weight slightly next session and reset to 10 reps.",
-  "lastSessionNote": "For each exercise, aim for 10-12 reps per set. Once you can achieve 12 reps for all 3 working sets, increase the weight slightly next session and reset to 10 reps."
+  "lastProgressionNote": "For Incline DB Curl, Cable Curl (low pulley), Cable Reverse Curl, Cable Crunch, Cable Kickback, and Lying Leg Curl, aim for 11 reps today. Once you can achieve 12 reps for all 3 working sets, increase the weight slightly next session and reset to 10 reps.",
+  "lastSessionNote": "For Incline DB Curl, Cable Curl (low pulley), Cable Reverse Curl, Cable Crunch, Cable Kickback, and Lying Leg Curl, aim for 11 reps today. Once you can achieve 12 reps for all 3 working sets, increase the weight slightly next session and reset to 10 reps."
 }
