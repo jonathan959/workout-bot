@@ -1,9 +1,9 @@
 {
-  "currentDay": 5,
+  "currentDay": 6,
   "currentWeek": 1,
   "currentMesocycle": 1,
   "phase": "accumulation",
-  "lastUpdated": "2026-03-24",
+  "lastUpdated": "2026-03-27",
   "progressionTracking": {
     "Wide Grip Lat Pulldown": {
       "lastReps": 10,
@@ -178,6 +178,36 @@
       "lastWeight": "—",
       "targetReps": 11,
       "repRange": "10-12"
+    },
+    "Chest Supported Machine Row": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Single Arm Cable Row": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Reverse Pec Deck": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Single Arm Cable Reverse Fly": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Curl (cross body)": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
     }
   },
   "recentSessions": [
@@ -241,8 +271,23 @@
         "Cable Kickback",
         "Lying Leg Curl"
       ]
+    },
+    {
+      "date": "2026-03-27",
+      "day": "Day 5",
+      "focus": "Pull B — Back Thickness + Rear Delts + Biceps",
+      "exercises": [
+        "Chest Supported Machine Row",
+        "Single Arm Cable Row",
+        "Reverse Pec Deck",
+        "Incline DB Curl",
+        "Single Arm Cable Reverse Fly",
+        "Cable Curl (cross body)",
+        "Behind Back Wrist Curl",
+        "Hanging Leg Raise"
+      ]
     }
   ],
-  "lastProgressionNote": "For Incline DB Curl, Cable Curl (low pulley), Cable Reverse Curl, Cable Crunch, Cable Kickback, and Lying Leg Curl, aim for 11 reps today. Once you can achieve 12 reps for all 3 working sets, increase the weight slightly next session and reset to 10 reps.",
-  "lastSessionNote": "For Incline DB Curl, Cable Curl (low pulley), Cable Reverse Curl, Cable Crunch, Cable Kickback, and Lying Leg Curl, aim for 11 reps today. Once you can achieve 12 reps for all 3 working sets, increase the weight slightly next session and reset to 10 reps."
+  "lastProgressionNote": "For Incline DB Curl, Behind Back Wrist Curl, and Hanging Leg Raise, aim for 11 reps today. For Chest Supported Machine Row, Single Arm Cable Row, Reverse Pec Deck, Single Arm Cable Reverse Fly, and Cable Curl (cross body), aim for 10-12 reps today, starting with 10 reps. Once you can achieve 12 reps for all working sets of an exercise, increase the weight slightly next session and reset to 10 reps.",
+  "lastSessionNote": "For Incline DB Curl, Behind Back Wrist Curl, and Hanging Leg Raise, aim for 11 reps today. For Chest Supported Machine Row, Single Arm Cable Row, Reverse Pec Deck, Single Arm Cable Reverse Fly, and Cable Curl (cross body), aim for 10-12 reps today, starting with 10 reps. Once you can achieve 12 reps for all working sets of an exercise, increase the weight slightly next session and reset to 10 reps."
 }
