@@ -1,9 +1,9 @@
 {
-  "currentDay": 6,
-  "currentWeek": 1,
+  "currentDay": 1,
+  "currentWeek": 2,
   "currentMesocycle": 1,
-  "phase": "accumulation",
-  "lastUpdated": "2026-03-27",
+  "phase": "development",
+  "lastUpdated": "2026-03-28",
   "progressionTracking": {
     "Wide Grip Lat Pulldown": {
       "lastReps": 10,
@@ -208,6 +208,30 @@
       "lastWeight": "—",
       "targetReps": 11,
       "repRange": "10-12"
+    },
+    "Flat DB Press": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Cable Fly High to Low": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Reverse Cable Fly": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
+    },
+    "Single Arm Overhead Cable Extension": {
+      "lastReps": 10,
+      "lastWeight": "—",
+      "targetReps": 11,
+      "repRange": "10-12"
     }
   },
   "recentSessions": [
@@ -286,8 +310,22 @@
         "Behind Back Wrist Curl",
         "Hanging Leg Raise"
       ]
+    },
+    {
+      "date": "2026-03-28",
+      "day": "Day 6",
+      "focus": "Push B — Chest + Shoulders + Triceps second hit",
+      "exercises": [
+        "Flat DB Press",
+        "Cable Fly High to Low",
+        "Cable Lateral Raise",
+        "Reverse Cable Fly",
+        "Single Arm Overhead Cable Extension",
+        "EZ Bar Skull Crusher",
+        "Cable Crunch"
+      ]
     }
   ],
-  "lastProgressionNote": "For Incline DB Curl, Behind Back Wrist Curl, and Hanging Leg Raise, aim for 11 reps today. For Chest Supported Machine Row, Single Arm Cable Row, Reverse Pec Deck, Single Arm Cable Reverse Fly, and Cable Curl (cross body), aim for 10-12 reps today, starting with 10 reps. Once you can achieve 12 reps for all working sets of an exercise, increase the weight slightly next session and reset to 10 reps.",
-  "lastSessionNote": "For Incline DB Curl, Behind Back Wrist Curl, and Hanging Leg Raise, aim for 11 reps today. For Chest Supported Machine Row, Single Arm Cable Row, Reverse Pec Deck, Single Arm Cable Reverse Fly, and Cable Curl (cross body), aim for 10-12 reps today, starting with 10 reps. Once you can achieve 12 reps for all working sets of an exercise, increase the weight slightly next session and reset to 10 reps."
+  "lastProgressionNote": "For Cable Lateral Raise, EZ Bar Skull Crusher, and Cable Crunch, aim for 11 reps today. For Flat DB Press, Cable Fly High to Low, Reverse Cable Fly, and Single Arm Overhead Cable Extension, aim for 10-12 reps today, starting with 10 reps. Once you can achieve 12 reps for all working sets of an exercise, increase the weight slightly next session and reset to 10 reps.",
+  "lastSessionNote": "For Cable Lateral Raise, EZ Bar Skull Crusher, and Cable Crunch, aim for 11 reps today. For Flat DB Press, Cable Fly High to Low, Reverse Cable Fly, and Single Arm Overhead Cable Extension, aim for 10-12 reps today, starting with 10 reps. Once you can achieve 12 reps for all working sets of an exercise, increase the weight slightly next session and reset to 10 reps."
 }
