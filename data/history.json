@@ -1,9 +1,9 @@
 {
-  "currentDay": 1,
+  "currentDay": 2,
   "currentWeek": 2,
   "currentMesocycle": 1,
   "phase": "development",
-  "lastUpdated": "2026-03-28",
+  "lastUpdated": "2026-04-28",
   "progressionTracking": {
     "Wide Grip Lat Pulldown": {
       "lastReps": 10,
@@ -237,21 +237,6 @@
   "recentSessions": [
     {
       "date": "2026-03-23",
-      "day": "Day 1",
-      "focus": "Pull A — Back Width + Rear Delts + Biceps + Forearms",
-      "exercises": [
-        "Wide Grip Lat Pulldown",
-        "Straight Arm Cable Pulldown",
-        "Cable Reverse Fly",
-        "Incline DB Curl",
-        "Face Pull",
-        "Cable Curl",
-        "Reverse Curl (EZ Bar)",
-        "Cable Crunch"
-      ]
-    },
-    {
-      "date": "2026-03-23",
       "day": "Day 2",
       "focus": "Push A — Chest + Shoulders only (no triceps)",
       "exercises": [
@@ -324,8 +309,23 @@
         "EZ Bar Skull Crusher",
         "Cable Crunch"
       ]
+    },
+    {
+      "date": "2026-04-28",
+      "day": "Day 1",
+      "focus": "Pull A — Back Width + Rear Delts + Biceps + Forearms",
+      "exercises": [
+        "Wide Grip Lat Pulldown",
+        "Straight Arm Cable Pulldown",
+        "Cable Reverse Fly",
+        "Incline DB Curl",
+        "Face Pull",
+        "Cable Curl",
+        "Reverse Curl (EZ Bar)",
+        "Cable Crunch"
+      ]
     }
   ],
-  "lastProgressionNote": "For Cable Lateral Raise, EZ Bar Skull Crusher, and Cable Crunch, aim for 11 reps today. For Flat DB Press, Cable Fly High to Low, Reverse Cable Fly, and Single Arm Overhead Cable Extension, aim for 10-12 reps today, starting with 10 reps. Once you can achieve 12 reps for all working sets of an exercise, increase the weight slightly next session and reset to 10 reps.",
-  "lastSessionNote": "For Cable Lateral Raise, EZ Bar Skull Crusher, and Cable Crunch, aim for 11 reps today. For Flat DB Press, Cable Fly High to Low, Reverse Cable Fly, and Single Arm Overhead Cable Extension, aim for 10-12 reps today, starting with 10 reps. Once you can achieve 12 reps for all working sets of an exercise, increase the weight slightly next session and reset to 10 reps."
+  "lastProgressionNote": "For all exercises today (Wide Grip Lat Pulldown, Straight Arm Cable Pulldown, Cable Reverse Fly, Incline DB Curl, Face Pull, Cable Curl, Reverse Curl (EZ Bar), and Cable Crunch), aim to achieve 11 reps for all working sets. Once you can consistently hit 12 reps for all working sets of an exercise, increase the weight slightly in your next session and reset to 10 reps.",
+  "lastSessionNote": "For all exercises today (Wide Grip Lat Pulldown, Straight Arm Cable Pulldown, Cable Reverse Fly, Incline DB Curl, Face Pull, Cable Curl, Reverse Curl (EZ Bar), and Cable Crunch), aim to achieve 11 reps for all working sets. Once you can consistently hit 12 reps for all working sets of an exercise, increase the weight slightly in your next session and reset to 10 reps."
 }
