@@ -5,7 +5,7 @@
 /** Phrases only — allow e.g. Romanian deadlift (light DB) per program */
 const BANNED_SUBSTRINGS = [
   "barbell bench press",
-  "bench press", // barbell flat bench
+  "bench press", // barbell flat bench — allows incline/smith variants without "bench press" token
   "conventional deadlift",
   "trap bar deadlift",
   "sumo deadlift",
@@ -16,10 +16,14 @@ const BANNED_SUBSTRINGS = [
   "t-bar row",
   "t bar row",
   "pendlay row",
-  "calf raise",
+  "calf",
+  "calves",
   "upright row",
   "behind the neck",
   "behind-the-neck",
+  "dumbbell overhead press",
+  "close grip dumbbell",
+  "close grip db",
 ];
 
 function norm(s) {
@@ -61,6 +65,10 @@ function validateBanned(exercises, errors) {
       if (name.includes(b)) {
         errors.push(`Banned exercise pattern "${b}" in: ${e.exercise}`);
       }
+    }
+    // Any dip variation (assist/machine/bench dips, etc.) — elbow risk profile
+    if (/\bdips?\b|\bdipping\b/.test(name)) {
+      errors.push(`Banned dips in: ${e.exercise}`);
     }
   }
 }

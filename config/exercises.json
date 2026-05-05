@@ -4,68 +4,70 @@
       "day1": {
         "back": [
           {
-            "exercise": "Wide Grip Lat Pulldown",
+            "exercise": "Pull-Up (weighted if possible, assisted if needed)",
             "muscle": "Back",
-            "reason": "Upper lat width, V-taper",
+            "reason": "Vertical pull, lat width, V-taper — anchor compound",
             "rest": "2 min",
-            "cue": "Pull elbows to back pockets"
+            "warmupRequired": true,
+            "cue": "Drive elbows down to hips, full hang at bottom"
+          },
+          {
+            "exercise": "Chest-Supported Machine Row",
+            "muscle": "Back",
+            "reason": "Horizontal thickness, zero lower back load",
+            "rest": "2 min",
+            "warmupRequired": true,
+            "cue": "Pull elbows to ribs, squeeze shoulder blades"
           },
           {
             "exercise": "Straight Arm Cable Pulldown",
             "muscle": "Back",
-            "reason": "Lat isolation, zero bicep",
+            "reason": "Lat isolation with no bicep involvement",
             "rest": "90s",
-            "cue": "Feel lats fully stretch at top"
+            "cue": "Slight elbow bend locked, feel lats stretch then contract"
           }
         ],
         "rearDelts": [
           {
             "exercise": "Cable Reverse Fly",
             "muscle": "Rear Delts",
-            "reason": "Constant tension, full ROM",
+            "reason": "Rear delt isolation with constant tension",
             "rest": "60s",
-            "cue": "Light weight, feel rear delt"
-          },
-          {
-            "exercise": "Face Pull",
-            "muscle": "Rear Delts",
-            "reason": "Rear delt + joint health",
-            "rest": "60s",
-            "cue": "Pull to forehead, elbows high"
+            "cue": "Light weight, lead with pinkies"
           }
         ],
         "biceps": [
           {
             "exercise": "Incline DB Curl",
             "muscle": "Biceps",
-            "reason": "Long head stretch, maximum peak",
+            "reason": "Long head stretch — preferred bicep variation",
             "rest": "90s",
-            "cue": "Full stretch at bottom"
+            "cue": "Full stretch at bottom, no swinging"
           },
           {
-            "exercise": "Cable Curl",
+            "exercise": "Cable Curl (bar attachment)",
             "muscle": "Biceps",
-            "reason": "Constant tension, full ROM",
+            "reason": "Constant tension peak contraction",
             "rest": "90s",
-            "cue": "Squeeze hard at top"
+            "cue": "Elbows pinned to sides"
           }
         ],
         "forearms": [
           {
-            "exercise": "Reverse Curl (EZ Bar)",
+            "exercise": "Reverse Curl (EZ bar)",
             "muscle": "Forearms",
-            "reason": "Brachioradialis thickness",
+            "reason": "Brachioradialis development",
             "rest": "60s",
-            "cue": "Slow and controlled"
+            "cue": "Slow tempo, no momentum"
           }
         ],
         "core": [
           {
             "exercise": "Cable Crunch",
             "muscle": "Core",
-            "reason": "Weighted abs",
+            "reason": "Weighted abs for actual growth",
             "rest": "60s",
-            "cue": "Ribs to hips not head down"
+            "cue": "Ribs to hips, not head down"
           }
         ]
       },
@@ -74,118 +76,122 @@
           {
             "exercise": "Incline DB Press",
             "muscle": "Chest",
-            "reason": "Upper chest — your weak spot",
+            "reason": "Upper chest priority — anchor compound",
             "rest": "2-3 min",
             "warmupRequired": true,
-            "cue": "Drive through upper chest not shoulders"
+            "cue": "30 degree bench, drive through chest"
           },
           {
-            "exercise": "Cable Fly Low to High",
+            "exercise": "Machine Chest Press",
             "muscle": "Chest",
-            "reason": "Upper chest constant tension",
-            "rest": "90s",
-            "cue": "Squeeze at peak, control descent"
+            "reason": "Different angle and loading from DB press",
+            "rest": "2 min",
+            "cue": "Slight pause at chest, controlled negative"
           },
           {
-            "exercise": "Cable Fly Mid Height",
+            "exercise": "Cable Chest Fly (low to high)",
             "muscle": "Chest",
-            "reason": "Mid chest, full tension",
+            "reason": "Upper chest stretch with constant tension",
             "rest": "90s",
-            "cue": "Feel inner chest at peak"
+            "cue": "Squeeze hands together at top"
           }
         ],
         "shoulders": [
           {
             "exercise": "Cable Lateral Raise",
             "muscle": "Shoulders",
-            "reason": "Side delt width, constant tension",
+            "reason": "Side delt with constant tension at bottom",
             "rest": "60s",
             "cue": "Lead with elbow not hand"
-          },
+          }
+        ],
+        "rearDelts": [
           {
-            "exercise": "Single Arm Cable OHP",
-            "muscle": "Shoulders",
-            "reason": "Delt compound, constant tension",
-            "rest": "2 min",
-            "cue": "Drive up not forward"
-          },
-          {
-            "exercise": "Seated DB Lateral Raise",
-            "muscle": "Shoulders",
-            "reason": "Side delt overload",
+            "exercise": "Cable Reverse Fly",
+            "muscle": "Rear Delts",
+            "reason": "Rear delt second hit — Push A would otherwise lack this",
             "rest": "60s",
-            "cue": "Raise to ear height"
+            "cue": "Light weight, feel rear delt only"
           }
         ],
         "core": [
           {
             "exercise": "Hanging Leg Raise",
             "muscle": "Core",
-            "reason": "Lower abs, full ROM",
+            "reason": "Lower abs full ROM",
             "rest": "60s",
-            "cue": "Control descent, no swinging"
+            "cue": "Curl pelvis up, no swinging"
           }
         ]
       },
       "day3": {
         "glutes": [
           {
-            "exercise": "Hip Thrust",
+            "exercise": "Hip Thrust (machine or barbell)",
             "muscle": "Glutes",
-            "reason": "Overall glute size, max contraction",
+            "reason": "Best glute mass builder — anchor compound",
             "rest": "2-3 min",
             "warmupRequired": true,
-            "cue": "Squeeze glutes hard at top"
-          },
-          {
-            "exercise": "Cable Kickback",
-            "muscle": "Glutes",
-            "reason": "Upper glute isolation",
-            "rest": "60s",
-            "cue": "Squeeze at full extension"
-          },
-          {
-            "exercise": "Cable Pull Through",
-            "muscle": "Glutes",
-            "reason": "Glute stretch position",
-            "rest": "90s",
-            "cue": "Hinge at hips not waist"
+            "cue": "Drive hips up, squeeze glutes hard at top"
           }
         ],
-        "quadsAndGlutes": [
+        "quadsGlutes": [
+          {
+            "exercise": "Bulgarian Split Squat (DB)",
+            "muscle": "Quads + Glutes",
+            "reason": "Glute + quad + VMO with upright torso, knee-safe — responds well",
+            "rest": "2 min",
+            "cue": "Upright torso, knee tracks over toes"
+          },
           {
             "exercise": "Leg Press (feet high and wide)",
-            "muscle": "Quads + Glutes",
-            "reason": "Glute + quad compound",
+            "muscle": "Glutes + Quads",
+            "reason": "Glute-biased press, moderate weight only — knee constraint",
             "rest": "2 min",
-            "cue": "Drive through heels"
+            "cue": "Moderate weight only, full controlled ROM"
+          }
+        ],
+        "quadsVMO": [
+          {
+            "exercise": "Leg Extension (VMO focus)",
+            "muscle": "Quads (VMO)",
+            "reason": "Direct VMO/teardrop work — anchor exercise",
+            "rest": "90s",
+            "cue": "Toes slightly out, 1 second pause at top lockout"
           }
         ],
         "hamstrings": [
           {
             "exercise": "Lying Leg Curl",
             "muscle": "Hamstrings",
-            "reason": "Hamstring short position",
+            "reason": "Hamstring shortened position",
             "rest": "90s",
-            "cue": "Curl heel to glute"
+            "cue": "Slow 3-second negative, full contraction"
+          },
+          {
+            "exercise": "Seated Leg Curl",
+            "muscle": "Hamstrings",
+            "reason": "Hamstring lengthened position — best position for growth",
+            "rest": "90s",
+            "cue": "Feel stretch at start of each rep"
           }
         ],
-        "lowerBack": [
+        "glutesFinisher": [
           {
-            "exercise": "Machine Hyperextension (light)",
-            "muscle": "Lower Back",
-            "reason": "Lower back strengthening",
+            "exercise": "Cable Kickback",
+            "muscle": "Glutes",
+            "reason": "Glute isolation finisher",
             "rest": "60s",
-            "cue": "Squeeze glutes at top"
+            "cue": "Squeeze glute at end of kick"
           }
         ],
         "core": [
           {
             "exercise": "Ab Wheel Rollout",
             "muscle": "Core",
-            "reason": "Deep core + lower back",
+            "reason": "Deep core + lower back stability",
             "rest": "60s",
-            "cue": "Brace core throughout"
+            "cue": "Brace hard, don't sag"
           }
         ]
       },
@@ -193,63 +199,73 @@
         "triceps": [
           {
             "exercise": "Overhead Cable Extension",
-            "muscle": "Triceps",
-            "reason": "Long head — your missing angle",
+            "muscle": "Triceps (long head)",
+            "reason": "Long head priority — non-negotiable, fresh first",
             "rest": "90s",
-            "cue": "Feel the stretch at the bottom"
+            "warmupRequired": true,
+            "cue": "Full stretch at bottom, lock elbows in place"
           },
           {
             "exercise": "Rope Pushdown",
-            "muscle": "Triceps",
-            "reason": "Lateral head peak contraction",
+            "muscle": "Triceps (lateral/medial)",
+            "reason": "Lateral and medial head",
             "rest": "90s",
-            "cue": "Supinate at bottom for peak"
+            "cue": "Spread rope at bottom, full lockout"
           },
           {
-            "exercise": "EZ Bar Skull Crusher",
-            "muscle": "Triceps",
-            "reason": "All 3 heads, max stretch",
-            "rest": "2 min",
-            "cue": "Lower to forehead slowly"
+            "exercise": "Cable Tricep Extension (rope)",
+            "muscle": "Triceps (all heads)",
+            "reason": "All three heads finisher with no joint stress",
+            "rest": "90s",
+            "cue": "Slow tempo, control the negative"
           }
         ],
         "biceps": [
           {
             "exercise": "Incline DB Curl",
-            "muscle": "Biceps",
-            "reason": "Long head — maximum stretch",
+            "muscle": "Biceps (long head)",
+            "reason": "Long head bicep, still relatively fresh",
             "rest": "90s",
             "cue": "Full stretch at bottom"
           },
           {
-            "exercise": "Hammer Curl",
-            "muscle": "Biceps",
-            "reason": "Brachialis + forearm thickness",
+            "exercise": "Cable Hammer Curl (rope)",
+            "muscle": "Biceps + Forearms",
+            "reason": "Brachialis and forearm thickness",
             "rest": "90s",
             "cue": "Neutral grip throughout"
           },
           {
-            "exercise": "Cable Curl (low pulley)",
-            "muscle": "Biceps",
-            "reason": "Constant tension lengthened",
+            "exercise": "Preacher Curl (machine)",
+            "muscle": "Biceps (short head)",
+            "reason": "Short head bicep, different angle from incline",
+            "rest": "60s",
+            "cue": "Don't lose tension at top"
+          }
+        ],
+        "quadsVMO": [
+          {
+            "exercise": "Leg Extension (VMO focus)",
+            "muscle": "Quads (VMO)",
+            "reason": "Second quad/VMO hit of the week — anchor",
             "rest": "90s",
-            "cue": "Squeeze hard at top"
+            "cue": "Toes slightly out, 1s pause at top"
+          },
+          {
+            "exercise": "Walking DB Lunge or Reverse Lunge",
+            "muscle": "Quads",
+            "reason": "Quad-biased single-leg, knee-friendly",
+            "rest": "90s",
+            "cue": "Long stride, knee tracks over toes"
           }
         ],
         "forearms": [
           {
-            "exercise": "Cable Reverse Curl",
+            "exercise": "Wrist Curl",
             "muscle": "Forearms",
-            "reason": "Brachioradialis thickness",
+            "reason": "Forearm flexor",
             "rest": "60s",
-            "cue": "Slow and controlled"
-          },
-          {
-            "exercise": "Behind Back Wrist Curl",
-            "muscle": "Forearms",
-            "reason": "Forearm flexor thickness",
-            "rest": "60s",
-            "cue": "Full wrist ROM"
+            "cue": "Full ROM at the wrist"
           }
         ],
         "core": [
@@ -258,99 +274,76 @@
             "muscle": "Core",
             "reason": "Weighted abs",
             "rest": "60s",
-            "cue": "Ribs to hips not head down"
-          }
-        ],
-        "secondary": [
-          {
-            "exercise": "Cable Kickback",
-            "muscle": "Glutes",
-            "reason": "Glute isolation second hit",
-            "rest": "60s",
-            "cue": "Squeeze at full extension"
-          },
-          {
-            "exercise": "Lying Leg Curl",
-            "muscle": "Hamstrings",
-            "reason": "Hamstring second hit",
-            "rest": "90s",
-            "cue": "Curl heel to glute"
+            "cue": "Ribs to hips"
           }
         ]
       },
       "day5": {
         "back": [
           {
-            "exercise": "Chest Supported Machine Row",
+            "exercise": "Single-Arm Cable Row",
             "muscle": "Back",
-            "reason": "Mid back thickness, zero lower back",
+            "reason": "Unilateral horizontal pull, full ROM — anchor compound",
             "rest": "2 min",
             "warmupRequired": true,
-            "cue": "Pull to lower chest"
+            "cue": "Full stretch forward, drive elbow back"
           },
           {
-            "exercise": "Single Arm Cable Row",
+            "exercise": "Lat Pulldown (close neutral grip)",
             "muscle": "Back",
-            "reason": "Unilateral — fixes imbalances",
+            "reason": "Different vertical pull from Day 1's wide grip",
             "rest": "2 min",
-            "cue": "Elbow past your back"
+            "cue": "Pull to upper chest, lean back slightly"
           },
           {
-            "exercise": "Close Grip Lat Pulldown",
-            "muscle": "Back",
-            "reason": "Lower lat thickness",
-            "rest": "2 min",
-            "cue": "Pull elbows to hips"
+            "exercise": "Seated Cable Row (wide grip)",
+            "muscle": "Back (mid)",
+            "reason": "Mid-back and rhomboid emphasis",
+            "rest": "90s",
+            "cue": "Squeeze shoulder blades together"
           }
         ],
         "rearDelts": [
           {
-            "exercise": "Reverse Pec Deck",
+            "exercise": "Rear Delt Machine (Reverse Pec Deck)",
             "muscle": "Rear Delts",
-            "reason": "Pure rear delt isolation",
+            "reason": "Different stimulus than Pull A's cable fly",
             "rest": "60s",
-            "cue": "Light weight, feel rear delt"
-          },
-          {
-            "exercise": "Single Arm Cable Reverse Fly",
-            "muscle": "Rear Delts",
-            "reason": "Unilateral — fixes imbalance",
-            "rest": "60s",
-            "cue": "Lead with elbow back"
+            "cue": "Squeeze and pause for 1 second"
           }
         ],
         "biceps": [
           {
             "exercise": "Incline DB Curl",
             "muscle": "Biceps",
-            "reason": "Long head stretch — first bicep Pull B",
+            "reason": "Long head bicep — primary variation",
             "rest": "90s",
             "cue": "Full stretch at bottom"
           },
           {
-            "exercise": "Cable Curl (cross body)",
-            "muscle": "Biceps",
-            "reason": "Peak contraction angle",
+            "exercise": "Hammer Curl (DB)",
+            "muscle": "Biceps + Forearms",
+            "reason": "Brachialis, different from Pull A's cable curl",
             "rest": "90s",
-            "cue": "Supinate at top"
+            "cue": "Neutral grip throughout"
           }
         ],
         "forearms": [
           {
-            "exercise": "Behind Back Wrist Curl",
+            "exercise": "Wrist Curl + Reverse Wrist Curl",
             "muscle": "Forearms",
-            "reason": "Forearm flexor thickness",
+            "reason": "Both flexor and extensor",
             "rest": "60s",
-            "cue": "Full wrist ROM"
+            "cue": "Full ROM both directions"
           }
         ],
         "core": [
           {
             "exercise": "Hanging Leg Raise",
             "muscle": "Core",
-            "reason": "Lower abs, full ROM",
+            "reason": "Lower abs full ROM",
             "rest": "60s",
-            "cue": "Control descent"
+            "cue": "No swinging, controlled"
           }
         ]
       },
@@ -359,49 +352,49 @@
           {
             "exercise": "Flat DB Press",
             "muscle": "Chest",
-            "reason": "Mid chest mass builder",
-            "rest": "2-3 min",
-            "warmupRequired": true,
-            "cue": "Drive through chest not shoulders"
+            "reason": "Mid chest — different angle than Push A's incline",
+            "rest": "2 min",
+            "cue": "Slight pause at chest"
           },
           {
-            "exercise": "Cable Fly High to Low",
-            "muscle": "Chest",
-            "reason": "Lower chest constant tension",
+            "exercise": "Cable Fly (high to low)",
+            "muscle": "Chest (lower)",
+            "reason": "Lower chest fibers — different angle than Push A",
             "rest": "90s",
-            "cue": "Squeeze at bottom of movement"
+            "cue": "Squeeze low and across body"
           }
         ],
         "shoulders": [
           {
-            "exercise": "Cable Lateral Raise",
+            "exercise": "Machine Shoulder Press (neutral grip)",
             "muscle": "Shoulders",
-            "reason": "Side delt second hit this week",
-            "rest": "60s",
-            "cue": "Lead with elbow not hand"
+            "reason": "Vertical press WITHOUT elbow stress — anchor compound",
+            "rest": "2-3 min",
+            "warmupRequired": true,
+            "cue": "Neutral grip mandatory, controlled descent"
           },
           {
-            "exercise": "Reverse Cable Fly",
+            "exercise": "DB Lateral Raise",
             "muscle": "Shoulders",
-            "reason": "Rear delt second session",
+            "reason": "Top-position overload, different from Push A's cable",
             "rest": "60s",
-            "cue": "Light weight feel rear delt"
+            "cue": "Lead with elbow, slight forward lean"
           }
         ],
         "triceps": [
           {
-            "exercise": "Single Arm Overhead Cable Extension",
-            "muscle": "Triceps",
-            "reason": "Long head second hit this week",
+            "exercise": "Single-Arm Overhead Cable Extension",
+            "muscle": "Triceps (long head)",
+            "reason": "Long head 2nd hit, unilateral variation",
             "rest": "90s",
-            "cue": "Feel full stretch at bottom"
+            "cue": "Full stretch at bottom"
           },
           {
             "exercise": "EZ Bar Skull Crusher",
-            "muscle": "Triceps",
-            "reason": "All 3 heads overload",
-            "rest": "2 min",
-            "cue": "Lower to forehead slowly"
+            "muscle": "Triceps (all heads)",
+            "reason": "All three heads, heavy loading available",
+            "rest": "90s",
+            "cue": "Lower to forehead slowly, elbows locked in place"
           }
         ],
         "core": [
@@ -410,7 +403,7 @@
             "muscle": "Core",
             "reason": "Weighted abs",
             "rest": "60s",
-            "cue": "Ribs to hips not head down"
+            "cue": "Ribs to hips"
           }
         ]
       }
@@ -419,68 +412,70 @@
       "day1": {
         "back": [
           {
-            "exercise": "Single Arm Lat Pulldown",
+            "exercise": "Pull-Up (weighted if possible, assisted if needed)",
             "muscle": "Back",
-            "reason": "Unilateral lat width, fixes imbalance",
+            "reason": "Vertical pull, lat width, V-taper — anchor compound",
             "rest": "2 min",
-            "cue": "Pull elbow to hip"
+            "warmupRequired": true,
+            "cue": "Drive elbows down to hips, full hang at bottom"
           },
           {
-            "exercise": "Single Arm Straight Arm Pulldown",
+            "exercise": "Seal Row (or Chest-Supported T-Handle alternative)",
             "muscle": "Back",
-            "reason": "Unilateral lat isolation",
+            "reason": "Horizontal thickness, zero lower back load",
+            "rest": "2 min",
+            "warmupRequired": true,
+            "cue": "Pull elbows to ribs, squeeze shoulder blades"
+          },
+          {
+            "exercise": "Straight Arm Cable Pulldown",
+            "muscle": "Back",
+            "reason": "Lat isolation with no bicep involvement",
             "rest": "90s",
-            "cue": "Feel full lat stretch"
+            "cue": "Slight elbow bend locked, feel lats stretch then contract"
           }
         ],
         "rearDelts": [
           {
-            "exercise": "Single Arm Cable Reverse Fly",
+            "exercise": "Cable Reverse Fly",
             "muscle": "Rear Delts",
-            "reason": "Unilateral rear delt",
+            "reason": "Rear delt isolation with constant tension",
             "rest": "60s",
-            "cue": "Lead with elbow back"
-          },
-          {
-            "exercise": "Rope Face Pull",
-            "muscle": "Rear Delts",
-            "reason": "Rear delt + external rotation",
-            "rest": "60s",
-            "cue": "Pull to forehead elbows high"
+            "cue": "Light weight, lead with pinkies"
           }
         ],
         "biceps": [
           {
             "exercise": "Incline DB Curl",
             "muscle": "Biceps",
-            "reason": "First bicep — long head stretch Pull A",
+            "reason": "Long head stretch — preferred bicep variation",
             "rest": "90s",
-            "cue": "Full stretch at bottom"
+            "cue": "Full stretch at bottom, no swinging"
           },
           {
-            "exercise": "High Cable Curl",
+            "exercise": "Cable Curl (bar attachment)",
             "muscle": "Biceps",
-            "reason": "Short head peak new angle",
+            "reason": "Constant tension peak contraction",
             "rest": "90s",
-            "cue": "Keep elbows high"
+            "cue": "Elbows pinned to sides"
           }
         ],
         "forearms": [
           {
-            "exercise": "DB Reverse Curl",
+            "exercise": "Reverse Curl (EZ bar)",
             "muscle": "Forearms",
-            "reason": "Brachioradialis new stimulus",
+            "reason": "Brachioradialis development",
             "rest": "60s",
-            "cue": "Control the descent"
+            "cue": "Slow tempo, no momentum"
           }
         ],
         "core": [
           {
-            "exercise": "Hanging Leg Raise",
+            "exercise": "Cable Crunch",
             "muscle": "Core",
-            "reason": "Lower abs full ROM",
+            "reason": "Weighted abs for actual growth",
             "rest": "60s",
-            "cue": "Control descent no swinging"
+            "cue": "Ribs to hips, not head down"
           }
         ]
       },
@@ -489,182 +484,42 @@
           {
             "exercise": "Incline DB Press",
             "muscle": "Chest",
-            "reason": "Upper chest priority",
+            "reason": "Upper chest priority — anchor compound",
             "rest": "2-3 min",
             "warmupRequired": true,
-            "cue": "Drive through upper chest not shoulders"
+            "cue": "30 degree bench, drive through chest"
           },
           {
-            "exercise": "Cable Fly Low to High",
+            "exercise": "Incline Machine Press",
             "muscle": "Chest",
-            "reason": "Upper chest constant tension",
-            "rest": "90s",
-            "cue": "Squeeze at peak control descent"
+            "reason": "Different angle and loading from DB press",
+            "rest": "2 min",
+            "cue": "Slight pause at chest, controlled negative"
           },
           {
-            "exercise": "Cable Fly Mid Height",
+            "exercise": "Cable Chest Fly (low to high)",
             "muscle": "Chest",
-            "reason": "Mid chest full tension",
+            "reason": "Upper chest stretch with constant tension",
             "rest": "90s",
-            "cue": "Feel inner chest at peak"
+            "cue": "Squeeze hands together at top"
           }
         ],
         "shoulders": [
           {
             "exercise": "Cable Lateral Raise",
             "muscle": "Shoulders",
-            "reason": "Side delt constant tension",
+            "reason": "Side delt with constant tension at bottom",
             "rest": "60s",
             "cue": "Lead with elbow not hand"
-          },
-          {
-            "exercise": "Single Arm Cable OHP",
-            "muscle": "Shoulders",
-            "reason": "Delt compound constant tension",
-            "rest": "2 min",
-            "cue": "Drive up not forward"
-          },
-          {
-            "exercise": "Seated DB Lateral Raise",
-            "muscle": "Shoulders",
-            "reason": "Side delt overload",
-            "rest": "60s",
-            "cue": "Raise to ear height"
           }
         ],
-        "core": [
+        "rearDelts": [
           {
-            "exercise": "Ab Wheel Rollout",
-            "muscle": "Core",
-            "reason": "Deep core strength",
+            "exercise": "Cable Reverse Fly",
+            "muscle": "Rear Delts",
+            "reason": "Rear delt second hit — Push A would otherwise lack this",
             "rest": "60s",
-            "cue": "Brace core throughout"
-          }
-        ]
-      },
-      "day3": {
-        "glutes": [
-          {
-            "exercise": "Single Leg Hip Thrust",
-            "muscle": "Glutes",
-            "reason": "Unilateral glute overload",
-            "rest": "2-3 min",
-            "warmupRequired": true,
-            "cue": "Squeeze glute hard at top"
-          },
-          {
-            "exercise": "Abduction Machine",
-            "muscle": "Glutes",
-            "reason": "Side glute hip width",
-            "rest": "60s",
-            "cue": "Control the return"
-          },
-          {
-            "exercise": "Cable Pull Through",
-            "muscle": "Glutes",
-            "reason": "Glute stretch position",
-            "rest": "90s",
-            "cue": "Hinge at hips not waist"
-          }
-        ],
-        "quadsAndGlutes": [
-          {
-            "exercise": "Leg Press feet high and wide",
-            "muscle": "Quads + Glutes",
-            "reason": "Glute + quad compound",
-            "rest": "2 min",
-            "cue": "Drive through heels"
-          }
-        ],
-        "hamstrings": [
-          {
-            "exercise": "Lying Leg Curl",
-            "muscle": "Hamstrings",
-            "reason": "Hamstring short position",
-            "rest": "90s",
-            "cue": "Curl heel to glute"
-          }
-        ],
-        "lowerBack": [
-          {
-            "exercise": "Machine Hyperextension light",
-            "muscle": "Lower Back",
-            "reason": "Lower back strengthening",
-            "rest": "60s",
-            "cue": "Squeeze glutes at top"
-          }
-        ],
-        "core": [
-          {
-            "exercise": "Cable Crunch",
-            "muscle": "Core",
-            "reason": "Weighted abs",
-            "rest": "60s",
-            "cue": "Ribs to hips not head down"
-          }
-        ]
-      },
-      "day4": {
-        "triceps": [
-          {
-            "exercise": "Single Arm Overhead Cable Extension",
-            "muscle": "Triceps",
-            "reason": "Unilateral long head fixes imbalance",
-            "rest": "90s",
-            "cue": "Feel full stretch at bottom"
-          },
-          {
-            "exercise": "Bar Pushdown",
-            "muscle": "Triceps",
-            "reason": "Lateral head new stimulus",
-            "rest": "90s",
-            "cue": "Lock elbows in place"
-          },
-          {
-            "exercise": "Dip Machine",
-            "muscle": "Triceps",
-            "reason": "Compound overload heavier than bodyweight",
-            "rest": "2 min",
-            "cue": "Lean forward slightly"
-          }
-        ],
-        "biceps": [
-          {
-            "exercise": "Incline DB Curl",
-            "muscle": "Biceps",
-            "reason": "First bicep arms day",
-            "rest": "90s",
-            "cue": "Full stretch at bottom"
-          },
-          {
-            "exercise": "Hammer Curl",
-            "muscle": "Biceps",
-            "reason": "Brachialis thickness",
-            "rest": "90s",
-            "cue": "Neutral grip throughout"
-          },
-          {
-            "exercise": "High Cable Curl",
-            "muscle": "Biceps",
-            "reason": "Short head from new angle",
-            "rest": "90s",
-            "cue": "Keep elbows high"
-          }
-        ],
-        "forearms": [
-          {
-            "exercise": "Cable Reverse Curl",
-            "muscle": "Forearms",
-            "reason": "Brachioradialis thickness",
-            "rest": "60s",
-            "cue": "Slow and controlled"
-          },
-          {
-            "exercise": "Behind Back Wrist Curl",
-            "muscle": "Forearms",
-            "reason": "Forearm flexor thickness",
-            "rest": "60s",
-            "cue": "Full wrist ROM"
+            "cue": "Light weight, feel rear delt only"
           }
         ],
         "core": [
@@ -673,150 +528,152 @@
             "muscle": "Core",
             "reason": "Lower abs full ROM",
             "rest": "60s",
-            "cue": "Control descent"
-          }
-        ],
-        "secondary": [
-          {
-            "exercise": "Cable Kickback",
-            "muscle": "Glutes",
-            "reason": "Glute second hit this week",
-            "rest": "60s",
-            "cue": "Squeeze at full extension"
-          },
-          {
-            "exercise": "Lying Leg Curl",
-            "muscle": "Hamstrings",
-            "reason": "Hamstring second hit this week",
-            "rest": "90s",
-            "cue": "Curl heel to glute"
+            "cue": "Curl pelvis up, no swinging"
           }
         ]
       },
-      "day5": {
-        "back": [
+      "day3": {
+        "glutes": [
           {
-            "exercise": "Single Arm DB Row chest supported",
-            "muscle": "Back",
-            "reason": "Unilateral thickness fixes imbalance",
-            "rest": "2 min",
+            "exercise": "Hip Thrust (machine or barbell)",
+            "muscle": "Glutes",
+            "reason": "Best glute mass builder — anchor compound",
+            "rest": "2-3 min",
             "warmupRequired": true,
-            "cue": "Elbow past your back"
-          },
+            "cue": "Drive hips up, squeeze glutes hard at top"
+          }
+        ],
+        "quadsGlutes": [
           {
-            "exercise": "Single Arm Cable Row",
-            "muscle": "Back",
-            "reason": "Unilateral cable constant tension",
+            "exercise": "Step-Up (high box, weighted)",
+            "muscle": "Quads + Glutes",
+            "reason": "Glute + quad + VMO with upright torso, knee-safe — responds well",
             "rest": "2 min",
-            "cue": "Pull elbow to hip"
+            "cue": "Upright torso, knee tracks over toes"
           },
           {
-            "exercise": "Close Grip Lat Pulldown",
-            "muscle": "Back",
-            "reason": "Lower lat thickness",
+            "exercise": "Leg Press (feet high and wide)",
+            "muscle": "Glutes + Quads",
+            "reason": "Glute-biased press, moderate weight only — knee constraint",
             "rest": "2 min",
-            "cue": "Pull elbows to hips"
+            "cue": "Moderate weight only, full controlled ROM"
           }
         ],
-        "rearDelts": [
+        "quadsVMO": [
           {
-            "exercise": "Rear Delt Cable Row",
-            "muscle": "Rear Delts",
-            "reason": "Rear delt from new angle",
-            "rest": "60s",
-            "cue": "Lead with elbow back"
+            "exercise": "Leg Extension (VMO focus)",
+            "muscle": "Quads (VMO)",
+            "reason": "Direct VMO/teardrop work — anchor exercise",
+            "rest": "90s",
+            "cue": "Toes slightly out, 1 second pause at top lockout"
+          }
+        ],
+        "hamstrings": [
+          {
+            "exercise": "Lying Leg Curl",
+            "muscle": "Hamstrings",
+            "reason": "Hamstring shortened position",
+            "rest": "90s",
+            "cue": "Slow 3-second negative, full contraction"
           },
           {
-            "exercise": "Single Arm Cable Reverse Fly",
-            "muscle": "Rear Delts",
-            "reason": "Unilateral rear delt",
-            "rest": "60s",
-            "cue": "Feel rear delt not trap"
+            "exercise": "Seated Leg Curl",
+            "muscle": "Hamstrings",
+            "reason": "Hamstring lengthened position — best position for growth",
+            "rest": "90s",
+            "cue": "Feel stretch at start of each rep"
           }
         ],
-        "biceps": [
+        "glutesFinisher": [
           {
-            "exercise": "Incline DB Curl",
-            "muscle": "Biceps",
-            "reason": "First bicep Pull B",
-            "rest": "90s",
-            "cue": "Full stretch at bottom"
-          },
-          {
-            "exercise": "Cable Curl cross body",
-            "muscle": "Biceps",
-            "reason": "Supination peak contraction",
-            "rest": "90s",
-            "cue": "Supinate at top"
-          }
-        ],
-        "forearms": [
-          {
-            "exercise": "Behind Back Wrist Curl",
-            "muscle": "Forearms",
-            "reason": "Forearm flexor thickness",
+            "exercise": "Cable Kickback",
+            "muscle": "Glutes",
+            "reason": "Glute isolation finisher",
             "rest": "60s",
-            "cue": "Full wrist ROM"
+            "cue": "Squeeze glute at end of kick"
           }
         ],
         "core": [
           {
             "exercise": "Ab Wheel Rollout",
             "muscle": "Core",
-            "reason": "Deep core strength",
+            "reason": "Deep core + lower back stability",
             "rest": "60s",
-            "cue": "Brace core throughout"
+            "cue": "Brace hard, don't sag"
           }
         ]
       },
-      "day6": {
-        "chest": [
-          {
-            "exercise": "Flat DB Press",
-            "muscle": "Chest",
-            "reason": "Mid chest mass builder",
-            "rest": "2-3 min",
-            "warmupRequired": true,
-            "cue": "Drive through chest not shoulders"
-          },
-          {
-            "exercise": "Cable Fly High to Low",
-            "muscle": "Chest",
-            "reason": "Lower chest constant tension",
-            "rest": "90s",
-            "cue": "Squeeze at bottom of movement"
-          }
-        ],
-        "shoulders": [
-          {
-            "exercise": "Cable Lateral Raise",
-            "muscle": "Shoulders",
-            "reason": "Side delt second hit this week",
-            "rest": "60s",
-            "cue": "Lead with elbow not hand"
-          },
-          {
-            "exercise": "Reverse Cable Fly",
-            "muscle": "Shoulders",
-            "reason": "Rear delt second session",
-            "rest": "60s",
-            "cue": "Light weight feel rear delt"
-          }
-        ],
+      "day4": {
         "triceps": [
           {
-            "exercise": "Single Arm Overhead Cable Extension",
-            "muscle": "Triceps",
-            "reason": "Long head second hit unilateral",
+            "exercise": "Overhead Cable Extension",
+            "muscle": "Triceps (long head)",
+            "reason": "Long head priority — non-negotiable, fresh first",
             "rest": "90s",
-            "cue": "Feel full stretch at bottom"
+            "warmupRequired": true,
+            "cue": "Full stretch at bottom, lock elbows in place"
           },
           {
-            "exercise": "EZ Bar Skull Crusher",
-            "muscle": "Triceps",
-            "reason": "All 3 heads overload",
-            "rest": "2 min",
-            "cue": "Lower to forehead slowly"
+            "exercise": "V-Bar Pushdown",
+            "muscle": "Triceps (lateral/medial)",
+            "reason": "Lateral and medial head",
+            "rest": "90s",
+            "cue": "Spread rope at bottom, full lockout"
+          },
+          {
+            "exercise": "Cable Tricep Extension (rope)",
+            "muscle": "Triceps (all heads)",
+            "reason": "All three heads finisher with no joint stress",
+            "rest": "90s",
+            "cue": "Slow tempo, control the negative"
+          }
+        ],
+        "biceps": [
+          {
+            "exercise": "Incline DB Curl",
+            "muscle": "Biceps (long head)",
+            "reason": "Long head bicep, still relatively fresh",
+            "rest": "90s",
+            "cue": "Full stretch at bottom"
+          },
+          {
+            "exercise": "Hammer Curl (DB, alternating)",
+            "muscle": "Biceps + Forearms",
+            "reason": "Brachialis and forearm thickness",
+            "rest": "90s",
+            "cue": "Neutral grip throughout"
+          },
+          {
+            "exercise": "Preacher Curl (machine)",
+            "muscle": "Biceps (short head)",
+            "reason": "Short head bicep, different angle from incline",
+            "rest": "60s",
+            "cue": "Don't lose tension at top"
+          }
+        ],
+        "quadsVMO": [
+          {
+            "exercise": "Leg Extension (VMO focus)",
+            "muscle": "Quads (VMO)",
+            "reason": "Second quad/VMO hit of the week — anchor",
+            "rest": "90s",
+            "cue": "Toes slightly out, 1s pause at top"
+          },
+          {
+            "exercise": "Walking DB Lunge or Reverse Lunge",
+            "muscle": "Quads",
+            "reason": "Quad-biased single-leg, knee-friendly",
+            "rest": "90s",
+            "cue": "Long stride, knee tracks over toes"
+          }
+        ],
+        "forearms": [
+          {
+            "exercise": "Wrist Curl",
+            "muscle": "Forearms",
+            "reason": "Forearm flexor",
+            "rest": "60s",
+            "cue": "Full ROM at the wrist"
           }
         ],
         "core": [
@@ -825,7 +682,136 @@
             "muscle": "Core",
             "reason": "Weighted abs",
             "rest": "60s",
-            "cue": "Ribs to hips not head down"
+            "cue": "Ribs to hips"
+          }
+        ]
+      },
+      "day5": {
+        "back": [
+          {
+            "exercise": "Chest-Supported DB Row (incline bench)",
+            "muscle": "Back",
+            "reason": "Unilateral horizontal pull, full ROM — anchor compound",
+            "rest": "2 min",
+            "warmupRequired": true,
+            "cue": "Full stretch forward, drive elbow back"
+          },
+          {
+            "exercise": "Lat Pulldown (close neutral grip)",
+            "muscle": "Back",
+            "reason": "Different vertical pull from Day 1's wide grip",
+            "rest": "2 min",
+            "cue": "Pull to upper chest, lean back slightly"
+          },
+          {
+            "exercise": "Machine Row (wide grip)",
+            "muscle": "Back (mid)",
+            "reason": "Mid-back and rhomboid emphasis",
+            "rest": "90s",
+            "cue": "Squeeze shoulder blades together"
+          }
+        ],
+        "rearDelts": [
+          {
+            "exercise": "Rear Delt Machine (Reverse Pec Deck)",
+            "muscle": "Rear Delts",
+            "reason": "Different stimulus than Pull A's cable fly",
+            "rest": "60s",
+            "cue": "Squeeze and pause for 1 second"
+          }
+        ],
+        "biceps": [
+          {
+            "exercise": "Incline DB Curl",
+            "muscle": "Biceps",
+            "reason": "Long head bicep — primary variation",
+            "rest": "90s",
+            "cue": "Full stretch at bottom"
+          },
+          {
+            "exercise": "Hammer Curl (DB)",
+            "muscle": "Biceps + Forearms",
+            "reason": "Brachialis, different from Pull A's cable curl",
+            "rest": "90s",
+            "cue": "Neutral grip throughout"
+          }
+        ],
+        "forearms": [
+          {
+            "exercise": "Wrist Curl + Reverse Wrist Curl",
+            "muscle": "Forearms",
+            "reason": "Both flexor and extensor",
+            "rest": "60s",
+            "cue": "Full ROM both directions"
+          }
+        ],
+        "core": [
+          {
+            "exercise": "Hanging Leg Raise",
+            "muscle": "Core",
+            "reason": "Lower abs full ROM",
+            "rest": "60s",
+            "cue": "No swinging, controlled"
+          }
+        ]
+      },
+      "day6": {
+        "chest": [
+          {
+            "exercise": "Decline Cable Press (or Decline Machine Press)",
+            "muscle": "Chest",
+            "reason": "Mid chest — different angle than Push A's incline",
+            "rest": "2 min",
+            "cue": "Slight pause at chest"
+          },
+          {
+            "exercise": "Cable Fly (high to low)",
+            "muscle": "Chest (lower)",
+            "reason": "Lower chest fibers — different angle than Push A",
+            "rest": "90s",
+            "cue": "Squeeze low and across body"
+          }
+        ],
+        "shoulders": [
+          {
+            "exercise": "Machine Shoulder Press (neutral grip)",
+            "muscle": "Shoulders",
+            "reason": "Vertical press WITHOUT elbow stress — anchor compound",
+            "rest": "2-3 min",
+            "warmupRequired": true,
+            "cue": "Neutral grip mandatory, controlled descent"
+          },
+          {
+            "exercise": "Cable Lateral Raise (single arm)",
+            "muscle": "Shoulders",
+            "reason": "Top-position overload, different from Push A's cable",
+            "rest": "60s",
+            "cue": "Lead with elbow, slight forward lean"
+          }
+        ],
+        "triceps": [
+          {
+            "exercise": "Single-Arm Overhead Cable Extension",
+            "muscle": "Triceps (long head)",
+            "reason": "Long head 2nd hit, unilateral variation",
+            "rest": "90s",
+            "cue": "Full stretch at bottom"
+          },
+          {
+            "exercise": "EZ Bar Skull Crusher",
+            "muscle": "Triceps (all heads)",
+            "reason": "All three heads, heavy loading available",
+            "rest": "90s",
+            "cue": "Lower to forehead slowly, elbows locked in place"
+          }
+        ],
+        "core": [
+          {
+            "exercise": "Cable Crunch",
+            "muscle": "Core",
+            "reason": "Weighted abs",
+            "rest": "60s",
+            "cue": "Ribs to hips"
           }
         ]
       }
@@ -834,75 +820,70 @@
       "day1": {
         "back": [
           {
-            "exercise": "Neutral Grip Lat Pulldown",
+            "exercise": "Pull-Up (weighted if possible, assisted if needed)",
             "muscle": "Back",
-            "reason": "Lower lat thickness peak load",
+            "reason": "Vertical pull, lat width, V-taper — anchor compound",
             "rest": "2 min",
-            "cue": "Pull elbows to hips"
+            "warmupRequired": true,
+            "cue": "Drive elbows down to hips, full hang at bottom"
           },
           {
-            "exercise": "Straight Arm Pulldown rope",
+            "exercise": "Meadows Row Alternative (single-arm DB row, chest-supported)",
             "muscle": "Back",
-            "reason": "Lat isolation peak tension",
+            "reason": "Horizontal thickness, zero lower back load",
+            "rest": "2 min",
+            "warmupRequired": true,
+            "cue": "Pull elbows to ribs, squeeze shoulder blades"
+          },
+          {
+            "exercise": "Straight Arm Cable Pulldown",
+            "muscle": "Back",
+            "reason": "Lat isolation with no bicep involvement",
             "rest": "90s",
-            "cue": "Feel lats fully stretch at top"
+            "cue": "Slight elbow bend locked, feel lats stretch then contract"
           }
         ],
         "rearDelts": [
           {
-            "exercise": "Bent Over Cable Fly",
+            "exercise": "Cable Reverse Fly",
             "muscle": "Rear Delts",
-            "reason": "Rear delt peak load angle",
+            "reason": "Rear delt isolation with constant tension",
             "rest": "60s",
-            "cue": "Lead with elbow back"
-          },
-          {
-            "exercise": "Rope Face Pull heavy",
-            "muscle": "Rear Delts",
-            "reason": "Rear delt peak week overload",
-            "rest": "60s",
-            "cue": "Pull to forehead elbows high"
+            "cue": "Light weight, lead with pinkies"
           }
         ],
         "biceps": [
           {
             "exercise": "Incline DB Curl",
             "muscle": "Biceps",
-            "reason": "First bicep Pull A peak week",
+            "reason": "Long head stretch — preferred bicep variation",
             "rest": "90s",
-            "cue": "Full stretch at bottom"
+            "cue": "Full stretch at bottom, no swinging"
           },
           {
-            "exercise": "Drag Curl",
+            "exercise": "Spider Curl (DB on incline bench, face down)",
             "muscle": "Biceps",
-            "reason": "Long head peak contraction",
+            "reason": "Constant tension peak contraction",
             "rest": "90s",
-            "cue": "Drag bar up the body"
-          },
-          {
-            "exercise": "Low Cable Curl",
-            "muscle": "Biceps",
-            "reason": "Constant tension lengthened",
-            "rest": "90s",
-            "cue": "Squeeze hard at top"
+            "cue": "Elbows pinned to sides"
           }
         ],
         "forearms": [
           {
-            "exercise": "Reverse Curl EZ Bar",
+            "exercise": "Reverse Curl (EZ bar)",
             "muscle": "Forearms",
-            "reason": "Brachioradialis peak load",
+            "reason": "Brachioradialis development",
             "rest": "60s",
-            "cue": "Control the descent"
+            "cue": "Slow tempo, no momentum"
           }
         ],
         "core": [
           {
-            "exercise": "Ab Wheel Rollout",
+            "exercise": "Cable Crunch",
             "muscle": "Core",
-            "reason": "Deep core peak load",
+            "reason": "Weighted abs for actual growth",
             "rest": "60s",
-            "cue": "Brace core throughout"
+            "cue": "Ribs to hips, not head down"
           }
         ]
       },
@@ -911,350 +892,334 @@
           {
             "exercise": "Incline DB Press",
             "muscle": "Chest",
-            "reason": "Upper chest peak load",
+            "reason": "Upper chest priority — anchor compound",
             "rest": "2-3 min",
             "warmupRequired": true,
-            "cue": "Drive through upper chest not shoulders"
+            "cue": "30 degree bench, drive through chest"
           },
           {
-            "exercise": "Cable Fly Low to High",
+            "exercise": "Smith Machine Incline Press (controlled, light-moderate)",
             "muscle": "Chest",
-            "reason": "Upper chest peak tension",
-            "rest": "90s",
-            "cue": "Squeeze at peak control descent"
+            "reason": "Different angle and loading from DB press",
+            "rest": "2 min",
+            "cue": "Slight pause at chest, controlled negative"
           },
           {
-            "exercise": "Cable Fly Mid Height",
+            "exercise": "Pec Deck Machine",
             "muscle": "Chest",
-            "reason": "Mid chest peak load",
+            "reason": "Upper chest stretch with constant tension",
             "rest": "90s",
-            "cue": "Feel inner chest at peak"
+            "cue": "Squeeze hands together at top"
           }
         ],
         "shoulders": [
           {
             "exercise": "Cable Lateral Raise",
             "muscle": "Shoulders",
-            "reason": "Side delt peak load",
+            "reason": "Side delt with constant tension at bottom",
             "rest": "60s",
             "cue": "Lead with elbow not hand"
-          },
+          }
+        ],
+        "rearDelts": [
           {
-            "exercise": "Single Arm Cable OHP",
-            "muscle": "Shoulders",
-            "reason": "Shoulder compound peak",
-            "rest": "2 min",
-            "cue": "Drive up not forward"
-          },
-          {
-            "exercise": "Seated DB Lateral Raise",
-            "muscle": "Shoulders",
-            "reason": "Side delt peak overload",
+            "exercise": "Cable Reverse Fly",
+            "muscle": "Rear Delts",
+            "reason": "Rear delt second hit — Push A would otherwise lack this",
             "rest": "60s",
-            "cue": "Raise to ear height"
+            "cue": "Light weight, feel rear delt only"
           }
         ],
         "core": [
           {
             "exercise": "Hanging Leg Raise",
             "muscle": "Core",
-            "reason": "Lower abs peak load",
+            "reason": "Lower abs full ROM",
             "rest": "60s",
-            "cue": "Control descent no swinging"
+            "cue": "Curl pelvis up, no swinging"
           }
         ]
       },
       "day3": {
         "glutes": [
           {
-            "exercise": "Banded Hip Thrust",
+            "exercise": "Hip Thrust (machine or barbell)",
             "muscle": "Glutes",
-            "reason": "Peak glute activation with band",
+            "reason": "Best glute mass builder — anchor compound",
             "rest": "2-3 min",
             "warmupRequired": true,
-            "cue": "Squeeze glutes hard at top"
-          },
-          {
-            "exercise": "Cable Kickback different angle",
-            "muscle": "Glutes",
-            "reason": "Glute peak load new angle",
-            "rest": "60s",
-            "cue": "Squeeze at full extension"
-          },
-          {
-            "exercise": "Cable Pull Through",
-            "muscle": "Glutes",
-            "reason": "Glute stretch peak load",
-            "rest": "90s",
-            "cue": "Hinge at hips not waist"
+            "cue": "Drive hips up, squeeze glutes hard at top"
           }
         ],
-        "quadsAndGlutes": [
+        "quadsGlutes": [
           {
-            "exercise": "Leg Press feet high and wide",
+            "exercise": "Walking DB Lunge (long stride)",
             "muscle": "Quads + Glutes",
-            "reason": "Peak load glute + quad",
+            "reason": "Glute + quad + VMO with upright torso, knee-safe — responds well",
             "rest": "2 min",
-            "cue": "Drive through heels"
+            "cue": "Upright torso, knee tracks over toes"
+          },
+          {
+            "exercise": "Hack Squat (light-moderate, knee-safe range)",
+            "muscle": "Glutes + Quads",
+            "reason": "Glute-biased press, moderate weight only — knee constraint",
+            "rest": "2 min",
+            "cue": "Moderate weight only, full controlled ROM"
+          }
+        ],
+        "quadsVMO": [
+          {
+            "exercise": "Leg Extension (VMO focus)",
+            "muscle": "Quads (VMO)",
+            "reason": "Direct VMO/teardrop work — anchor exercise",
+            "rest": "90s",
+            "cue": "Toes slightly out, 1 second pause at top lockout"
           }
         ],
         "hamstrings": [
           {
             "exercise": "Lying Leg Curl",
             "muscle": "Hamstrings",
-            "reason": "Hamstring peak load",
+            "reason": "Hamstring shortened position",
             "rest": "90s",
-            "cue": "Curl heel to glute"
+            "cue": "Slow 3-second negative, full contraction"
+          },
+          {
+            "exercise": "Seated Leg Curl",
+            "muscle": "Hamstrings",
+            "reason": "Hamstring lengthened position — best position for growth",
+            "rest": "90s",
+            "cue": "Feel stretch at start of each rep"
           }
         ],
-        "lowerBack": [
+        "glutesFinisher": [
           {
-            "exercise": "Machine Hyperextension light",
-            "muscle": "Lower Back",
-            "reason": "Lower back maintenance",
+            "exercise": "Cable Kickback",
+            "muscle": "Glutes",
+            "reason": "Glute isolation finisher",
             "rest": "60s",
-            "cue": "Squeeze glutes at top"
+            "cue": "Squeeze glute at end of kick"
           }
         ],
         "core": [
           {
             "exercise": "Ab Wheel Rollout",
             "muscle": "Core",
-            "reason": "Deep core peak",
+            "reason": "Deep core + lower back stability",
             "rest": "60s",
-            "cue": "Brace core throughout"
+            "cue": "Brace hard, don't sag"
           }
         ]
       },
       "day4": {
         "triceps": [
           {
-            "exercise": "Cable Overhead Extension rope",
-            "muscle": "Triceps",
-            "reason": "Long head peak load rope",
+            "exercise": "Overhead Cable Extension",
+            "muscle": "Triceps (long head)",
+            "reason": "Long head priority — non-negotiable, fresh first",
             "rest": "90s",
-            "cue": "Feel stretch at very bottom"
+            "warmupRequired": true,
+            "cue": "Full stretch at bottom, lock elbows in place"
           },
           {
-            "exercise": "Reverse Grip Pushdown",
-            "muscle": "Triceps",
-            "reason": "Medial head rarely trained",
+            "exercise": "Cross-Body Cable Extension",
+            "muscle": "Triceps (lateral/medial)",
+            "reason": "Lateral and medial head",
             "rest": "90s",
-            "cue": "Keep elbows tucked in"
+            "cue": "Spread rope at bottom, full lockout"
           },
           {
-            "exercise": "DB Skull Crusher",
-            "muscle": "Triceps",
-            "reason": "Peak load stretch position",
-            "rest": "2 min",
-            "cue": "Lower past head for stretch"
+            "exercise": "Cable Tricep Extension (rope)",
+            "muscle": "Triceps (all heads)",
+            "reason": "All three heads finisher with no joint stress",
+            "rest": "90s",
+            "cue": "Slow tempo, control the negative"
           }
         ],
         "biceps": [
           {
             "exercise": "Incline DB Curl",
-            "muscle": "Biceps",
-            "reason": "First bicep arms day peak",
+            "muscle": "Biceps (long head)",
+            "reason": "Long head bicep, still relatively fresh",
             "rest": "90s",
             "cue": "Full stretch at bottom"
           },
           {
-            "exercise": "Hammer Curl",
-            "muscle": "Biceps",
-            "reason": "Brachialis peak load",
+            "exercise": "Cable Hammer Curl (rope)",
+            "muscle": "Biceps + Forearms",
+            "reason": "Brachialis and forearm thickness",
             "rest": "90s",
             "cue": "Neutral grip throughout"
           },
           {
-            "exercise": "Machine Curl",
-            "muscle": "Biceps",
-            "reason": "Peak load constant tension",
+            "exercise": "Concentration Curl (DB)",
+            "muscle": "Biceps (short head)",
+            "reason": "Short head bicep, different angle from incline",
+            "rest": "60s",
+            "cue": "Don't lose tension at top"
+          }
+        ],
+        "quadsVMO": [
+          {
+            "exercise": "Leg Extension (VMO focus)",
+            "muscle": "Quads (VMO)",
+            "reason": "Second quad/VMO hit of the week — anchor",
             "rest": "90s",
-            "cue": "Squeeze hard at top"
+            "cue": "Toes slightly out, 1s pause at top"
+          },
+          {
+            "exercise": "Walking DB Lunge or Reverse Lunge",
+            "muscle": "Quads",
+            "reason": "Quad-biased single-leg, knee-friendly",
+            "rest": "90s",
+            "cue": "Long stride, knee tracks over toes"
           }
         ],
         "forearms": [
           {
-            "exercise": "Cable Reverse Curl",
+            "exercise": "Wrist Curl",
             "muscle": "Forearms",
-            "reason": "Brachioradialis peak load",
+            "reason": "Forearm flexor",
             "rest": "60s",
-            "cue": "Slow and controlled"
-          },
-          {
-            "exercise": "Behind Back Wrist Curl",
-            "muscle": "Forearms",
-            "reason": "Forearm flexor peak load",
-            "rest": "60s",
-            "cue": "Full wrist ROM"
+            "cue": "Full ROM at the wrist"
           }
         ],
         "core": [
           {
             "exercise": "Cable Crunch",
             "muscle": "Core",
-            "reason": "Weighted abs peak load",
+            "reason": "Weighted abs",
             "rest": "60s",
-            "cue": "Ribs to hips not head down"
-          }
-        ],
-        "secondary": [
-          {
-            "exercise": "Cable Kickback",
-            "muscle": "Glutes",
-            "reason": "Glute second hit peak week",
-            "rest": "60s",
-            "cue": "Squeeze at full extension"
-          },
-          {
-            "exercise": "Lying Leg Curl",
-            "muscle": "Hamstrings",
-            "reason": "Hamstring second hit peak week",
-            "rest": "90s",
-            "cue": "Curl heel to glute"
+            "cue": "Ribs to hips"
           }
         ]
       },
       "day5": {
         "back": [
           {
-            "exercise": "Chest Supported Machine Row",
+            "exercise": "Chest-Supported Row Machine (alternative angle)",
             "muscle": "Back",
-            "reason": "Peak load thickness zero lower back",
+            "reason": "Unilateral horizontal pull, full ROM — anchor compound",
             "rest": "2 min",
             "warmupRequired": true,
-            "cue": "Pull to lower chest"
+            "cue": "Full stretch forward, drive elbow back"
           },
           {
-            "exercise": "Single Arm Cable Row",
+            "exercise": "Lat Pulldown (close neutral grip)",
             "muscle": "Back",
-            "reason": "Unilateral peak load",
+            "reason": "Different vertical pull from Day 1's wide grip",
             "rest": "2 min",
-            "cue": "Elbow past your back"
+            "cue": "Pull to upper chest, lean back slightly"
           },
           {
-            "exercise": "Close Grip Lat Pulldown",
-            "muscle": "Back",
-            "reason": "Lower lat peak load",
-            "rest": "2 min",
-            "cue": "Pull elbows to hips"
+            "exercise": "Seated Cable Row (wide grip)",
+            "muscle": "Back (mid)",
+            "reason": "Mid-back and rhomboid emphasis",
+            "rest": "90s",
+            "cue": "Squeeze shoulder blades together"
           }
         ],
         "rearDelts": [
           {
-            "exercise": "Machine Reverse Fly",
+            "exercise": "Rear Delt Machine (Reverse Pec Deck)",
             "muscle": "Rear Delts",
-            "reason": "Peak isolation rear delt",
+            "reason": "Different stimulus than Pull A's cable fly",
             "rest": "60s",
-            "cue": "Light weight feel rear delt"
-          },
-          {
-            "exercise": "Bent Over Cable Fly",
-            "muscle": "Rear Delts",
-            "reason": "Rear delt peak load angle",
-            "rest": "60s",
-            "cue": "Lead with elbow back"
+            "cue": "Squeeze and pause for 1 second"
           }
         ],
         "biceps": [
           {
             "exercise": "Incline DB Curl",
             "muscle": "Biceps",
-            "reason": "First bicep Pull B peak",
+            "reason": "Long head bicep — primary variation",
             "rest": "90s",
             "cue": "Full stretch at bottom"
           },
           {
-            "exercise": "Machine Curl",
-            "muscle": "Biceps",
-            "reason": "Peak load constant tension",
+            "exercise": "Cross-Body Hammer Curl (DB)",
+            "muscle": "Biceps + Forearms",
+            "reason": "Brachialis, different from Pull A's cable curl",
             "rest": "90s",
-            "cue": "Squeeze hard at top"
-          },
-          {
-            "exercise": "Low Cable Curl",
-            "muscle": "Biceps",
-            "reason": "Lengthened position peak",
-            "rest": "90s",
-            "cue": "Full ROM every rep"
+            "cue": "Neutral grip throughout"
           }
         ],
         "forearms": [
           {
-            "exercise": "Behind Back Wrist Curl",
+            "exercise": "Wrist Curl + Reverse Wrist Curl",
             "muscle": "Forearms",
-            "reason": "Forearm flexor peak load",
+            "reason": "Both flexor and extensor",
             "rest": "60s",
-            "cue": "Full wrist ROM"
+            "cue": "Full ROM both directions"
           }
         ],
         "core": [
           {
             "exercise": "Hanging Leg Raise",
             "muscle": "Core",
-            "reason": "Lower abs peak load",
+            "reason": "Lower abs full ROM",
             "rest": "60s",
-            "cue": "Control descent no swinging"
+            "cue": "No swinging, controlled"
           }
         ]
       },
       "day6": {
         "chest": [
           {
-            "exercise": "Flat DB Press",
+            "exercise": "Machine Chest Press (mid-chest setting)",
             "muscle": "Chest",
-            "reason": "Mid chest peak load",
-            "rest": "2-3 min",
-            "warmupRequired": true,
-            "cue": "Drive through chest not shoulders"
+            "reason": "Mid chest — different angle than Push A's incline",
+            "rest": "2 min",
+            "cue": "Slight pause at chest"
           },
           {
-            "exercise": "Cable Fly High to Low",
-            "muscle": "Chest",
-            "reason": "Lower chest peak tension",
+            "exercise": "Cable Fly (high to low)",
+            "muscle": "Chest (lower)",
+            "reason": "Lower chest fibers — different angle than Push A",
             "rest": "90s",
-            "cue": "Squeeze at bottom of movement"
+            "cue": "Squeeze low and across body"
           }
         ],
         "shoulders": [
           {
-            "exercise": "Cable Lateral Raise",
+            "exercise": "Machine Shoulder Press (neutral grip)",
             "muscle": "Shoulders",
-            "reason": "Side delt peak second hit",
-            "rest": "60s",
-            "cue": "Lead with elbow not hand"
+            "reason": "Vertical press WITHOUT elbow stress — anchor compound",
+            "rest": "2-3 min",
+            "warmupRequired": true,
+            "cue": "Neutral grip mandatory, controlled descent"
           },
           {
-            "exercise": "Reverse Cable Fly",
+            "exercise": "DB Lateral Raise",
             "muscle": "Shoulders",
-            "reason": "Rear delt peak second session",
+            "reason": "Top-position overload, different from Push A's cable",
             "rest": "60s",
-            "cue": "Light weight feel rear delt"
+            "cue": "Lead with elbow, slight forward lean"
           }
         ],
         "triceps": [
           {
-            "exercise": "Cable Overhead Extension rope",
-            "muscle": "Triceps",
-            "reason": "Long head peak second hit",
+            "exercise": "Single-Arm Overhead Cable Extension",
+            "muscle": "Triceps (long head)",
+            "reason": "Long head 2nd hit, unilateral variation",
             "rest": "90s",
-            "cue": "Feel stretch at very bottom"
+            "cue": "Full stretch at bottom"
           },
           {
-            "exercise": "DB Skull Crusher",
-            "muscle": "Triceps",
-            "reason": "All 3 heads peak overload",
-            "rest": "2 min",
-            "cue": "Lower past head for stretch"
+            "exercise": "Cable Skull Crusher (rope, lying)",
+            "muscle": "Triceps (all heads)",
+            "reason": "All three heads, heavy loading available",
+            "rest": "90s",
+            "cue": "Lower to forehead slowly, elbows locked in place"
           }
         ],
         "core": [
           {
             "exercise": "Cable Crunch",
             "muscle": "Core",
-            "reason": "Weighted abs peak",
+            "reason": "Weighted abs",
             "rest": "60s",
-            "cue": "Ribs to hips not head down"
+            "cue": "Ribs to hips"
           }
         ]
       }
@@ -1262,58 +1227,38 @@
   },
   "mesocycleVariations": {
     "2": {
-      "tricepsVariation": [
-        "Single Arm Overhead Extension",
-        "Bar Pushdown",
-        "Dip Machine"
+      "newComparedToMesocycle1": [
+        "Cable Lateral Raise (single arm)",
+        "Chest-Supported DB Row (incline bench)",
+        "Decline Cable Press (or Decline Machine Press)",
+        "Hammer Curl (DB, alternating)",
+        "Incline Machine Press",
+        "Machine Row (wide grip)",
+        "Seal Row (or Chest-Supported T-Handle alternative)",
+        "Step-Up (high box, weighted)",
+        "V-Bar Pushdown"
       ],
-      "bicepVariation": [
-        "Spider Curl",
-        "High Cable Curl",
-        "Concentration Curl"
-      ],
-      "rearDeltVariation": [
-        "Rear Delt Cable Row",
-        "Band Pull Apart",
-        "Single Arm Reverse Fly"
-      ],
-      "gluteVariation": [
-        "Single Leg Hip Thrust",
-        "Abduction Machine",
-        "Cable Pull Through"
-      ],
-      "chestVariation": [
-        "Incline DB Press",
-        "Cable Fly High to Low",
-        "Cable Fly Low to High"
-      ]
+      "approxRotationFromMesocycle1Percent": 23
     },
     "3": {
-      "tricepsVariation": [
-        "Cable Overhead Extension (rope)",
-        "Reverse Grip Pushdown",
-        "DB Skull Crusher"
+      "newComparedToMesocycle2": [
+        "Cable Hammer Curl (rope)",
+        "Cable Skull Crusher (rope, lying)",
+        "Chest-Supported Row Machine (alternative angle)",
+        "Concentration Curl (DB)",
+        "Cross-Body Cable Extension",
+        "Cross-Body Hammer Curl (DB)",
+        "DB Lateral Raise",
+        "Hack Squat (light-moderate, knee-safe range)",
+        "Machine Chest Press (mid-chest setting)",
+        "Meadows Row Alternative (single-arm DB row, chest-supported)",
+        "Pec Deck Machine",
+        "Seated Cable Row (wide grip)",
+        "Smith Machine Incline Press (controlled, light-moderate)",
+        "Spider Curl (DB on incline bench, face down)",
+        "Walking DB Lunge (long stride)"
       ],
-      "bicepVariation": [
-        "Drag Curl",
-        "Low Cable Curl",
-        "Machine Curl"
-      ],
-      "rearDeltVariation": [
-        "Bent Over Cable Fly",
-        "Rope Face Pull",
-        "Machine Reverse Fly"
-      ],
-      "gluteVariation": [
-        "Banded Hip Thrust",
-        "Cable Kickback (different angle)",
-        "Cable Pull Through"
-      ],
-      "backVariation": [
-        "Neutral Grip Pulldown",
-        "Cable Row (high pulley)",
-        "Straight Arm Pulldown (rope)"
-      ]
+      "approxRotationFromMesocycle2Percent": 38
     }
   }
 }

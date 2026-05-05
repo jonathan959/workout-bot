@@ -1,5 +1,6 @@
 /**
- * Daily workout pipeline. Gemini system prompt + strict exercise rules live in src/prompts.js.
+ * Daily workout pipeline. Gemini system prompt: `buildSystemPrompt` in src/prompts.js
+ * (mirror: worker/prompts.mjs for Wrangler Cloudflare Worker).
  */
 require("dotenv").config();
 

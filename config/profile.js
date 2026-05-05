@@ -1,5 +1,5 @@
 module.exports = {
-  age: 21,
+  age: 22,
   experience: "advanced",
   trainingYears: 4,
   bodyType: "average",
@@ -10,13 +10,40 @@ module.exports = {
   belt: false,
 
   split: {
-    day1: "Pull A — Back Width + Rear Delts + Biceps + Forearms",
+    day1: "Pull A — Back Width + Thickness + Rear Delts + Biceps + Forearms",
     day2: "Push A — Chest + Shoulders only (no triceps)",
-    day3: "Legs A — Glute Focus",
-    day4: "Arms — Triceps first (priority) + Biceps + Forearms + 1 glute + 1 hamstring at end",
-    day5: "Pull B — Back Thickness + Rear Delts + Biceps",
-    day6: "Push B — Chest + Shoulders + Triceps second hit",
+    day3: "Legs A — Glute + Quad + Hamstring balanced",
+    day4: "Arms — Triceps priority + Biceps + Quad mini + Forearms",
+    day5: "Pull B — Back Thickness + Rear Delts + Biceps + Forearms",
+    day6: "Push B — Chest variation + Shoulders + Triceps 2nd hit",
   },
+
+  priorities: {
+    primary: ["Triceps", "Quads (VMO/teardrop)"],
+    secondary: ["Balanced hypertrophy across all muscle groups"],
+  },
+
+  exclusions: [
+    "Bent-over rows",
+    "Deadlifts",
+    "Barbell bench press",
+    "T-bar rows",
+    "Heavy squats",
+    "Heavy leg press",
+    "Overhead tricep movements (lying skull crushers OK, no overhead DB extensions)",
+    "Standard bicep curls (use incline DB curl instead)",
+    "Calf work entirely",
+    "Dips (any variation — elbow risk)",
+    "DB Overhead Press (elbow risk)",
+    "Close Grip DB Press (pushing/elbow risk)",
+  ],
+
+  alwaysInclude: [
+    "Overhead Cable Extension on Day 4 (long head triceps — non-negotiable)",
+    "Incline DB Curl as primary bicep variation",
+    "Pull-Up (weighted if possible) as Day 1 first exercise",
+    "Leg Extension on Day 3 AND Day 4 (VMO emphasis with toes slightly out, 1s pause at top)",
+  ],
 
   strengths: ["back", "chest", "glutes"],
 
@@ -43,21 +70,21 @@ module.exports = {
     },
     upperLats: {
       problem: "Width and V-taper could improve",
-      fix: "Wide grip pulldowns + straight arm pulldowns every pull day",
-      activationCue: "Pull elbows to back pockets not hands to chest",
+      fix: "Pull-ups plus pulldown + straight-arm pulldown every pull emphasis day",
+      activationCue: "Drive elbows down to hips, full hang stretch",
     },
     traps: {
       problem: "Underdeveloped, affects upper back thickness",
-      fix: "Shrugs or trap work every pull day",
+      fix: "Horizontal rows with chest support + vertical pulls across the week",
     },
     forearms: {
       problem: "Only one cable exercise currently",
-      fix: "Rotate reverse curl, wrist curl, cable reverse curl across sessions",
+      fix: "Rotate reverse curl, wrist curl, hammer work across sessions",
       activationCue: "Slow and controlled, full wrist ROM",
     },
     hamstrings: {
       problem: "Underdeveloped overall",
-      fix: "Leg curl variation every leg day, vary seated vs lying",
+      fix: "Leg curl variation every leg day; vary seated vs lying",
       activationCue: "Curl heel to glute, squeeze at top",
     },
     lowerQuadVMO: {
@@ -71,8 +98,8 @@ module.exports = {
     },
     lowerBack: {
       problem: "Mild pain from bending forward and heavy rows",
-      fix: "Machine hyperextensions on leg days only. Zero spinal flexion under load.",
-      activationCue: "Squeeze glutes at top, do not hyperextend spine",
+      fix: "Chest-supported rows only; hinge patterns light; zero heavy spinal flexion",
+      activationCue: "Brace neutrally on core work; hinge at hips on pull-through patterns",
     },
   },
 
@@ -81,12 +108,19 @@ module.exports = {
     "deadlifts",
     "heavy barbell squats",
     "bent over barbell rows",
-    "T-bar rows",
+    "t-bar rows",
     "pendlay rows",
     "calf raises",
     "heavy spinal flexion under load",
     "upright rows",
     "behind the neck press",
+    "dip ",
+    " dips",
+    " dip —",
+    "dumbbell overhead press",
+    "db overhead press",
+    "close grip db press",
+    "smith machine squat",
   ],
 
   sessionFormat: {
@@ -100,7 +134,8 @@ module.exports = {
     reasonPerExercise: true,
     reasonMaxWords: 5,
     activationCueForWeakMuscles: true,
-    dropsets: "Week 3 intensification only — last isolation exercise only — drop 25-30% — 6-10 extra reps — never on compounds",
+    dropsets:
+      "Week 3 intensification only — last isolation exercise only — drop 25-30% — 6-10 extra reps — never on compounds",
     restTimes: {
       heavyCompound: "2-3 minutes",
       isolation: "60-90 seconds",
@@ -127,7 +162,7 @@ module.exports = {
       reps: "12-15",
       intensity: "RPE 6 max",
       lowerBack: "complete rest from all loading",
-      legs: "hip thrusts bodyweight only, no leg press",
+      legs: "hip thrusts bodyweight only; leg press/skips light or omit per plan",
       focus: "mind muscle connection only",
       excludeLowerBackExercises: true,
       hipThrustBodyweightOnly: true,
@@ -139,6 +174,6 @@ module.exports = {
   glutes: {
     goal: "overall size — bigger all around",
     staples: ["hip thrusts", "cable kickbacks"],
-    squatStyle: "smith machine or goblet — light, glute focused only",
+    squatStyle: "Bulgarian split squat, lunges, or hack squat light-moderate — knee-safe only",
   },
 };
