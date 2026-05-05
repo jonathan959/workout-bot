@@ -7,7 +7,8 @@
     "workout": "node src/generate-workout.js",
     "weekly-summary": "node src/weekly-summary.js",
     "register-slash": "node scripts/register-slash-command.js",
-    "build:config": "node scripts/build-config-json.js"
+    "build:config": "node scripts/build-config-json.js",
+    "deploy:worker": "node scripts/wrangler-deploy.cjs"
   },
   "engines": {
     "node": ">=18"
